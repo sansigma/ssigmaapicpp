@@ -10,6 +10,7 @@
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
+#include <grpcpp/impl/codegen/client_callback.h>
 #include <grpcpp/impl/codegen/method_handler_impl.h>
 #include <grpcpp/impl/codegen/proto_utils.h>
 #include <grpcpp/impl/codegen/rpc_method.h>
@@ -68,6 +69,9 @@ class MarketHubServiceV1 final {
     class experimental_async_interface {
      public:
       virtual ~experimental_async_interface() {}
+      virtual void GetTrades(::grpc::ClientContext* context, ::ssigmaapi::markethub::v1::GetTradesRequest* request, ::grpc::experimental::ClientReadReactor< ::ssigmaapi::markethub::v1::GetTradesResponse>* reactor) = 0;
+      virtual void GetOrderBooks(::grpc::ClientContext* context, ::ssigmaapi::markethub::v1::GetOrderBooksRequest* request, ::grpc::experimental::ClientReadReactor< ::ssigmaapi::markethub::v1::GetOrderBooksResponse>* reactor) = 0;
+      virtual void GetTradesAndOrderBooks(::grpc::ClientContext* context, ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest* request, ::grpc::experimental::ClientReadReactor< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse>* reactor) = 0;
     };
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
@@ -114,6 +118,9 @@ class MarketHubServiceV1 final {
     class experimental_async final :
       public StubInterface::experimental_async_interface {
      public:
+      void GetTrades(::grpc::ClientContext* context, ::ssigmaapi::markethub::v1::GetTradesRequest* request, ::grpc::experimental::ClientReadReactor< ::ssigmaapi::markethub::v1::GetTradesResponse>* reactor) override;
+      void GetOrderBooks(::grpc::ClientContext* context, ::ssigmaapi::markethub::v1::GetOrderBooksRequest* request, ::grpc::experimental::ClientReadReactor< ::ssigmaapi::markethub::v1::GetOrderBooksResponse>* reactor) override;
+      void GetTradesAndOrderBooks(::grpc::ClientContext* context, ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest* request, ::grpc::experimental::ClientReadReactor< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse>* reactor) override;
      private:
       friend class Stub;
       explicit experimental_async(Stub* stub): stub_(stub) { }
@@ -215,6 +222,9 @@ class MarketHubServiceV1 final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     ExperimentalWithCallbackMethod_GetTrades() {
+      ::grpc::Service::experimental().MarkMethodCallback(0,
+        new ::grpc::internal::CallbackServerStreamingHandler< ::ssigmaapi::markethub::v1::GetTradesRequest, ::ssigmaapi::markethub::v1::GetTradesResponse>(
+          [this] { return this->GetTrades(); }));
     }
     ~ExperimentalWithCallbackMethod_GetTrades() override {
       BaseClassMustBeDerivedFromService(this);
@@ -224,6 +234,9 @@ class MarketHubServiceV1 final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    virtual ::grpc::experimental::ServerWriteReactor< ::ssigmaapi::markethub::v1::GetTradesRequest, ::ssigmaapi::markethub::v1::GetTradesResponse>* GetTrades() {
+      return new ::grpc::internal::UnimplementedWriteReactor<
+        ::ssigmaapi::markethub::v1::GetTradesRequest, ::ssigmaapi::markethub::v1::GetTradesResponse>;}
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_GetOrderBooks : public BaseClass {
@@ -231,6 +244,9 @@ class MarketHubServiceV1 final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     ExperimentalWithCallbackMethod_GetOrderBooks() {
+      ::grpc::Service::experimental().MarkMethodCallback(1,
+        new ::grpc::internal::CallbackServerStreamingHandler< ::ssigmaapi::markethub::v1::GetOrderBooksRequest, ::ssigmaapi::markethub::v1::GetOrderBooksResponse>(
+          [this] { return this->GetOrderBooks(); }));
     }
     ~ExperimentalWithCallbackMethod_GetOrderBooks() override {
       BaseClassMustBeDerivedFromService(this);
@@ -240,6 +256,9 @@ class MarketHubServiceV1 final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    virtual ::grpc::experimental::ServerWriteReactor< ::ssigmaapi::markethub::v1::GetOrderBooksRequest, ::ssigmaapi::markethub::v1::GetOrderBooksResponse>* GetOrderBooks() {
+      return new ::grpc::internal::UnimplementedWriteReactor<
+        ::ssigmaapi::markethub::v1::GetOrderBooksRequest, ::ssigmaapi::markethub::v1::GetOrderBooksResponse>;}
   };
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_GetTradesAndOrderBooks : public BaseClass {
@@ -247,6 +266,9 @@ class MarketHubServiceV1 final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     ExperimentalWithCallbackMethod_GetTradesAndOrderBooks() {
+      ::grpc::Service::experimental().MarkMethodCallback(2,
+        new ::grpc::internal::CallbackServerStreamingHandler< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest, ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse>(
+          [this] { return this->GetTradesAndOrderBooks(); }));
     }
     ~ExperimentalWithCallbackMethod_GetTradesAndOrderBooks() override {
       BaseClassMustBeDerivedFromService(this);
@@ -256,6 +278,9 @@ class MarketHubServiceV1 final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    virtual ::grpc::experimental::ServerWriteReactor< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest, ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse>* GetTradesAndOrderBooks() {
+      return new ::grpc::internal::UnimplementedWriteReactor<
+        ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest, ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse>;}
   };
   typedef ExperimentalWithCallbackMethod_GetTrades<ExperimentalWithCallbackMethod_GetOrderBooks<ExperimentalWithCallbackMethod_GetTradesAndOrderBooks<Service > > > ExperimentalCallbackService;
   template <class BaseClass>
@@ -375,6 +400,9 @@ class MarketHubServiceV1 final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     ExperimentalWithRawCallbackMethod_GetTrades() {
+      ::grpc::Service::experimental().MarkMethodRawCallback(0,
+        new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          [this] { return this->GetTrades(); }));
     }
     ~ExperimentalWithRawCallbackMethod_GetTrades() override {
       BaseClassMustBeDerivedFromService(this);
@@ -384,6 +412,9 @@ class MarketHubServiceV1 final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    virtual ::grpc::experimental::ServerWriteReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetTrades() {
+      return new ::grpc::internal::UnimplementedWriteReactor<
+        ::grpc::ByteBuffer, ::grpc::ByteBuffer>;}
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_GetOrderBooks : public BaseClass {
@@ -391,6 +422,9 @@ class MarketHubServiceV1 final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     ExperimentalWithRawCallbackMethod_GetOrderBooks() {
+      ::grpc::Service::experimental().MarkMethodRawCallback(1,
+        new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          [this] { return this->GetOrderBooks(); }));
     }
     ~ExperimentalWithRawCallbackMethod_GetOrderBooks() override {
       BaseClassMustBeDerivedFromService(this);
@@ -400,6 +434,9 @@ class MarketHubServiceV1 final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    virtual ::grpc::experimental::ServerWriteReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetOrderBooks() {
+      return new ::grpc::internal::UnimplementedWriteReactor<
+        ::grpc::ByteBuffer, ::grpc::ByteBuffer>;}
   };
   template <class BaseClass>
   class ExperimentalWithRawCallbackMethod_GetTradesAndOrderBooks : public BaseClass {
@@ -407,6 +444,9 @@ class MarketHubServiceV1 final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     ExperimentalWithRawCallbackMethod_GetTradesAndOrderBooks() {
+      ::grpc::Service::experimental().MarkMethodRawCallback(2,
+        new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          [this] { return this->GetTradesAndOrderBooks(); }));
     }
     ~ExperimentalWithRawCallbackMethod_GetTradesAndOrderBooks() override {
       BaseClassMustBeDerivedFromService(this);
@@ -416,6 +456,9 @@ class MarketHubServiceV1 final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    virtual ::grpc::experimental::ServerWriteReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetTradesAndOrderBooks() {
+      return new ::grpc::internal::UnimplementedWriteReactor<
+        ::grpc::ByteBuffer, ::grpc::ByteBuffer>;}
   };
   typedef Service StreamedUnaryService;
   template <class BaseClass>

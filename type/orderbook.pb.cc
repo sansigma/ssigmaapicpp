@@ -6,38 +6,30 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_ssigmaapi_2ftype_2forderbook_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_ssigmaapi_2ftype_2forderbook_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_BidAsk;
-}  // namespace protobuf_ssigmaapi_2ftype_2forderbook_2eproto
+extern PROTOBUF_INTERNAL_EXPORT_ssigmaapi_2ftype_2forderbook_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_BidAsk_ssigmaapi_2ftype_2forderbook_2eproto;
 namespace ssigmaapi {
 namespace type {
 class BidAskDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<BidAsk>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<BidAsk> _instance;
 } _BidAsk_default_instance_;
 class OrderBookDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OrderBook>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<OrderBook> _instance;
 } _OrderBook_default_instance_;
 }  // namespace type
 }  // namespace ssigmaapi
-namespace protobuf_ssigmaapi_2ftype_2forderbook_2eproto {
-static void InitDefaultsBidAsk() {
+static void InitDefaultsBidAsk_ssigmaapi_2ftype_2forderbook_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -48,10 +40,10 @@ static void InitDefaultsBidAsk() {
   ::ssigmaapi::type::BidAsk::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_BidAsk =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsBidAsk}, {}};
+::google::protobuf::internal::SCCInfo<0> scc_info_BidAsk_ssigmaapi_2ftype_2forderbook_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsBidAsk_ssigmaapi_2ftype_2forderbook_2eproto}, {}};
 
-static void InitDefaultsOrderBook() {
+static void InitDefaultsOrderBook_ssigmaapi_2ftype_2forderbook_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -62,39 +54,41 @@ static void InitDefaultsOrderBook() {
   ::ssigmaapi::type::OrderBook::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_OrderBook =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsOrderBook}, {
-      &protobuf_ssigmaapi_2ftype_2forderbook_2eproto::scc_info_BidAsk.base,}};
+::google::protobuf::internal::SCCInfo<1> scc_info_OrderBook_ssigmaapi_2ftype_2forderbook_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsOrderBook_ssigmaapi_2ftype_2forderbook_2eproto}, {
+      &scc_info_BidAsk_ssigmaapi_2ftype_2forderbook_2eproto.base,}};
 
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_BidAsk.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_OrderBook.base);
+void InitDefaults_ssigmaapi_2ftype_2forderbook_2eproto() {
+  ::google::protobuf::internal::InitSCC(&scc_info_BidAsk_ssigmaapi_2ftype_2forderbook_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_OrderBook_ssigmaapi_2ftype_2forderbook_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[2];
+::google::protobuf::Metadata file_level_metadata_ssigmaapi_2ftype_2forderbook_2eproto[2];
+constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_ssigmaapi_2ftype_2forderbook_2eproto = nullptr;
+constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_ssigmaapi_2ftype_2forderbook_2eproto = nullptr;
 
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const ::google::protobuf::uint32 TableStruct_ssigmaapi_2ftype_2forderbook_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::type::BidAsk, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::type::BidAsk, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::type::BidAsk, price_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::type::BidAsk, amount_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::type::BidAsk, price_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::type::BidAsk, amount_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::type::OrderBook, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::type::OrderBook, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::type::OrderBook, exchange_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::type::OrderBook, base_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::type::OrderBook, quote_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::type::OrderBook, symbol_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::type::OrderBook, bids_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::type::OrderBook, asks_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::type::OrderBook, timestamp_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::type::OrderBook, exchange_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::type::OrderBook, base_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::type::OrderBook, quote_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::type::OrderBook, symbol_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::type::OrderBook, bids_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::type::OrderBook, asks_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::type::OrderBook, timestamp_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::ssigmaapi::type::BidAsk)},
   { 7, -1, sizeof(::ssigmaapi::type::OrderBook)},
 };
@@ -104,54 +98,38 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::ssigmaapi::type::_OrderBook_default_instance_),
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "ssigmaapi/type/orderbook.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, NULL, NULL);
-}
+::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_ssigmaapi_2ftype_2forderbook_2eproto = {
+  {}, AddDescriptors_ssigmaapi_2ftype_2forderbook_2eproto, "ssigmaapi/type/orderbook.proto", schemas,
+  file_default_instances, TableStruct_ssigmaapi_2ftype_2forderbook_2eproto::offsets,
+  file_level_metadata_ssigmaapi_2ftype_2forderbook_2eproto, 2, file_level_enum_descriptors_ssigmaapi_2ftype_2forderbook_2eproto, file_level_service_descriptors_ssigmaapi_2ftype_2forderbook_2eproto,
+};
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
+const char descriptor_table_protodef_ssigmaapi_2ftype_2forderbook_2eproto[] =
+  "\n\036ssigmaapi/type/orderbook.proto\022\016ssigma"
+  "api.type\"\'\n\006BidAsk\022\r\n\005price\030\001 \001(\001\022\016\n\006amo"
+  "unt\030\002 \001(\001\"\251\001\n\tOrderBook\022\020\n\010exchange\030\001 \001("
+  "\t\022\014\n\004base\030\002 \001(\t\022\r\n\005quote\030\003 \001(\t\022\016\n\006symbol"
+  "\030\004 \001(\t\022$\n\004bids\030\005 \003(\0132\026.ssigmaapi.type.Bi"
+  "dAsk\022$\n\004asks\030\006 \003(\0132\026.ssigmaapi.type.BidA"
+  "sk\022\021\n\ttimestamp\030\007 \001(\003B8Z6github.com/kait"
+  "o2/ssigmaapigo/type/orderbook;orderbookb"
+  "\006proto3"
+  ;
+::google::protobuf::internal::DescriptorTable descriptor_table_ssigmaapi_2ftype_2forderbook_2eproto = {
+  false, InitDefaults_ssigmaapi_2ftype_2forderbook_2eproto, 
+  descriptor_table_protodef_ssigmaapi_2ftype_2forderbook_2eproto,
+  "ssigmaapi/type/orderbook.proto", &assign_descriptors_table_ssigmaapi_2ftype_2forderbook_2eproto, 327,
+};
 
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 2);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\036ssigmaapi/type/orderbook.proto\022\016ssigma"
-      "api.type\"\'\n\006BidAsk\022\r\n\005price\030\001 \001(\001\022\016\n\006amo"
-      "unt\030\002 \001(\001\"\251\001\n\tOrderBook\022\020\n\010exchange\030\001 \001("
-      "\t\022\014\n\004base\030\002 \001(\t\022\r\n\005quote\030\003 \001(\t\022\016\n\006symbol"
-      "\030\004 \001(\t\022$\n\004bids\030\005 \003(\0132\026.ssigmaapi.type.Bi"
-      "dAsk\022$\n\004asks\030\006 \003(\0132\026.ssigmaapi.type.BidA"
-      "sk\022\021\n\ttimestamp\030\007 \001(\003B8Z6github.com/kait"
-      "o2/ssigmaapigo/type/orderbook;orderbookb"
-      "\006proto3"
+void AddDescriptors_ssigmaapi_2ftype_2forderbook_2eproto() {
+  static constexpr ::google::protobuf::internal::InitFunc deps[1] =
+  {
   };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 327);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "ssigmaapi/type/orderbook.proto", &protobuf_RegisterTypes);
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_ssigmaapi_2ftype_2forderbook_2eproto, deps, 0);
 }
 
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_ssigmaapi_2ftype_2forderbook_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+static bool dynamic_init_dummy_ssigmaapi_2ftype_2forderbook_2eproto = []() { AddDescriptors_ssigmaapi_2ftype_2forderbook_2eproto(); return true; }();
 namespace ssigmaapi {
 namespace type {
 
@@ -159,21 +137,23 @@ namespace type {
 
 void BidAsk::InitAsDefaultInstance() {
 }
+class BidAsk::HasBitSetters {
+ public:
+};
+
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int BidAsk::kPriceFieldNumber;
 const int BidAsk::kAmountFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 BidAsk::BidAsk()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_ssigmaapi_2ftype_2forderbook_2eproto::scc_info_BidAsk.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:ssigmaapi.type.BidAsk)
 }
 BidAsk::BidAsk(const BidAsk& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&price_, &from.price_,
     static_cast<size_t>(reinterpret_cast<char*>(&amount_) -
@@ -198,13 +178,8 @@ void BidAsk::SharedDtor() {
 void BidAsk::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* BidAsk::descriptor() {
-  ::protobuf_ssigmaapi_2ftype_2forderbook_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2ftype_2forderbook_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const BidAsk& BidAsk::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_ssigmaapi_2ftype_2forderbook_2eproto::scc_info_BidAsk.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_BidAsk_ssigmaapi_2ftype_2forderbook_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -221,9 +196,53 @@ void BidAsk::Clear() {
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* BidAsk::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<BidAsk*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // double price = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 9) goto handle_unusual;
+        msg->set_price(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double amount = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 17) goto handle_unusual;
+        msg->set_amount(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool BidAsk::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ssigmaapi.type.BidAsk)
   for (;;) {
@@ -233,8 +252,7 @@ bool BidAsk::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // double price = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (9 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -247,8 +265,7 @@ bool BidAsk::MergePartialFromCodedStream(
 
       // double amount = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (17 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -278,6 +295,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void BidAsk::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -295,16 +313,15 @@ void BidAsk::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->amount(), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:ssigmaapi.type.BidAsk)
 }
 
 ::google::protobuf::uint8* BidAsk::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:ssigmaapi.type.BidAsk)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -319,9 +336,9 @@ void BidAsk::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->amount(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ssigmaapi.type.BidAsk)
   return target;
@@ -331,11 +348,15 @@ size_t BidAsk::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ssigmaapi.type.BidAsk)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // double price = 1;
   if (this->price() != 0) {
     total_size += 1 + 8;
@@ -355,9 +376,9 @@ void BidAsk::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ssigmaapi.type.BidAsk)
   GOOGLE_DCHECK_NE(&from, this);
   const BidAsk* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const BidAsk>(
+      ::google::protobuf::DynamicCastToGenerated<BidAsk>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssigmaapi.type.BidAsk)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -405,14 +426,14 @@ void BidAsk::Swap(BidAsk* other) {
 }
 void BidAsk::InternalSwap(BidAsk* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(price_, other->price_);
   swap(amount_, other->amount_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata BidAsk::GetMetadata() const {
-  protobuf_ssigmaapi_2ftype_2forderbook_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2ftype_2forderbook_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ssigmaapi_2ftype_2forderbook_2eproto);
+  return ::file_level_metadata_ssigmaapi_2ftype_2forderbook_2eproto[kIndexInFileMessages];
 }
 
 
@@ -420,6 +441,10 @@ void BidAsk::InternalSwap(BidAsk* other) {
 
 void OrderBook::InitAsDefaultInstance() {
 }
+class OrderBook::HasBitSetters {
+ public:
+};
+
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int OrderBook::kExchangeFieldNumber;
 const int OrderBook::kBaseFieldNumber;
@@ -431,15 +456,13 @@ const int OrderBook::kTimestampFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 OrderBook::OrderBook()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_ssigmaapi_2ftype_2forderbook_2eproto::scc_info_OrderBook.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:ssigmaapi.type.OrderBook)
 }
 OrderBook::OrderBook(const OrderBook& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
+      _internal_metadata_(nullptr),
       bids_(from.bids_),
       asks_(from.asks_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
@@ -464,11 +487,13 @@ OrderBook::OrderBook(const OrderBook& from)
 }
 
 void OrderBook::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_OrderBook_ssigmaapi_2ftype_2forderbook_2eproto.base);
   exchange_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   base_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   quote_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   symbol_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  timestamp_ = GOOGLE_LONGLONG(0);
+  timestamp_ = PROTOBUF_LONGLONG(0);
 }
 
 OrderBook::~OrderBook() {
@@ -486,13 +511,8 @@ void OrderBook::SharedDtor() {
 void OrderBook::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* OrderBook::descriptor() {
-  ::protobuf_ssigmaapi_2ftype_2forderbook_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2ftype_2forderbook_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const OrderBook& OrderBook::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_ssigmaapi_2ftype_2forderbook_2eproto::scc_info_OrderBook.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_OrderBook_ssigmaapi_2ftype_2forderbook_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -509,13 +529,153 @@ void OrderBook::Clear() {
   base_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   quote_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   symbol_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  timestamp_ = GOOGLE_LONGLONG(0);
+  timestamp_ = PROTOBUF_LONGLONG(0);
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* OrderBook::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<OrderBook*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // string exchange = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("ssigmaapi.type.OrderBook.exchange");
+        object = msg->mutable_exchange();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string base = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("ssigmaapi.type.OrderBook.base");
+        object = msg->mutable_base();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string quote = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("ssigmaapi.type.OrderBook.quote");
+        object = msg->mutable_quote();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // string symbol = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("ssigmaapi.type.OrderBook.symbol");
+        object = msg->mutable_symbol();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // repeated .ssigmaapi.type.BidAsk bids = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::ssigmaapi::type::BidAsk::_InternalParse;
+          object = msg->add_bids();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 42 && (ptr += 1));
+        break;
+      }
+      // repeated .ssigmaapi.type.BidAsk asks = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::ssigmaapi::type::BidAsk::_InternalParse;
+          object = msg->add_asks();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 50 && (ptr += 1));
+        break;
+      }
+      // int64 timestamp = 7;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 56) goto handle_unusual;
+        msg->set_timestamp(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+string_till_end:
+  static_cast<::std::string*>(object)->clear();
+  static_cast<::std::string*>(object)->reserve(size);
+  goto len_delim_till_end;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool OrderBook::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ssigmaapi.type.OrderBook)
   for (;;) {
@@ -525,8 +685,7 @@ bool OrderBook::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // string exchange = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_exchange()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -541,8 +700,7 @@ bool OrderBook::MergePartialFromCodedStream(
 
       // string base = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_base()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -557,8 +715,7 @@ bool OrderBook::MergePartialFromCodedStream(
 
       // string quote = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_quote()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -573,8 +730,7 @@ bool OrderBook::MergePartialFromCodedStream(
 
       // string symbol = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_symbol()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -589,8 +745,7 @@ bool OrderBook::MergePartialFromCodedStream(
 
       // repeated .ssigmaapi.type.BidAsk bids = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                 input, add_bids()));
         } else {
@@ -601,8 +756,7 @@ bool OrderBook::MergePartialFromCodedStream(
 
       // repeated .ssigmaapi.type.BidAsk asks = 6;
       case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                 input, add_asks()));
         } else {
@@ -613,8 +767,7 @@ bool OrderBook::MergePartialFromCodedStream(
 
       // int64 timestamp = 7;
       case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(56u /* 56 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (56 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -644,6 +797,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void OrderBook::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -714,16 +868,15 @@ void OrderBook::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(7, this->timestamp(), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:ssigmaapi.type.OrderBook)
 }
 
 ::google::protobuf::uint8* OrderBook::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:ssigmaapi.type.OrderBook)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -777,7 +930,7 @@ void OrderBook::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->bids_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        5, this->bids(static_cast<int>(i)), deterministic, target);
+        5, this->bids(static_cast<int>(i)), target);
   }
 
   // repeated .ssigmaapi.type.BidAsk asks = 6;
@@ -785,7 +938,7 @@ void OrderBook::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->asks_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        6, this->asks(static_cast<int>(i)), deterministic, target);
+        6, this->asks(static_cast<int>(i)), target);
   }
 
   // int64 timestamp = 7;
@@ -793,9 +946,9 @@ void OrderBook::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(7, this->timestamp(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ssigmaapi.type.OrderBook)
   return target;
@@ -805,11 +958,15 @@ size_t OrderBook::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ssigmaapi.type.OrderBook)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .ssigmaapi.type.BidAsk bids = 5;
   {
     unsigned int count = static_cast<unsigned int>(this->bids_size());
@@ -876,9 +1033,9 @@ void OrderBook::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ssigmaapi.type.OrderBook)
   GOOGLE_DCHECK_NE(&from, this);
   const OrderBook* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const OrderBook>(
+      ::google::protobuf::DynamicCastToGenerated<OrderBook>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssigmaapi.type.OrderBook)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -941,6 +1098,7 @@ void OrderBook::Swap(OrderBook* other) {
 }
 void OrderBook::InternalSwap(OrderBook* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   CastToBase(&bids_)->InternalSwap(CastToBase(&other->bids_));
   CastToBase(&asks_)->InternalSwap(CastToBase(&other->asks_));
   exchange_.Swap(&other->exchange_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
@@ -952,12 +1110,11 @@ void OrderBook::InternalSwap(OrderBook* other) {
   symbol_.Swap(&other->symbol_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(timestamp_, other->timestamp_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata OrderBook::GetMetadata() const {
-  protobuf_ssigmaapi_2ftype_2forderbook_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2ftype_2forderbook_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ssigmaapi_2ftype_2forderbook_2eproto);
+  return ::file_level_metadata_ssigmaapi_2ftype_2forderbook_2eproto[kIndexInFileMessages];
 }
 
 
@@ -966,13 +1123,14 @@ void OrderBook::InternalSwap(OrderBook* other) {
 }  // namespace ssigmaapi
 namespace google {
 namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::ssigmaapi::type::BidAsk* Arena::CreateMaybeMessage< ::ssigmaapi::type::BidAsk >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::ssigmaapi::type::BidAsk* Arena::CreateMaybeMessage< ::ssigmaapi::type::BidAsk >(Arena* arena) {
   return Arena::CreateInternal< ::ssigmaapi::type::BidAsk >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::ssigmaapi::type::OrderBook* Arena::CreateMaybeMessage< ::ssigmaapi::type::OrderBook >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::ssigmaapi::type::OrderBook* Arena::CreateMaybeMessage< ::ssigmaapi::type::OrderBook >(Arena* arena) {
   return Arena::CreateInternal< ::ssigmaapi::type::OrderBook >(arena);
 }
 }  // namespace protobuf
 }  // namespace google
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

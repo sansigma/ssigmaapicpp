@@ -38,6 +38,10 @@ PashiriRestServiceV1::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface
   return ::grpc::internal::ClientReaderFactory< ::ssigmaapi::type::OrderBook>::Create(channel_.get(), rpcmethod_GetOrderBook_, context, request);
 }
 
+void PashiriRestServiceV1::Stub::experimental_async::GetOrderBook(::grpc::ClientContext* context, ::ssigmaapi::type::Market* request, ::grpc::experimental::ClientReadReactor< ::ssigmaapi::type::OrderBook>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::ssigmaapi::type::OrderBook>::Create(stub_->channel_.get(), stub_->rpcmethod_GetOrderBook_, context, request, reactor);
+}
+
 ::grpc::ClientAsyncReader< ::ssigmaapi::type::OrderBook>* PashiriRestServiceV1::Stub::AsyncGetOrderBookRaw(::grpc::ClientContext* context, const ::ssigmaapi::type::Market& request, ::grpc::CompletionQueue* cq, void* tag) {
   return ::grpc::internal::ClientAsyncReaderFactory< ::ssigmaapi::type::OrderBook>::Create(channel_.get(), cq, rpcmethod_GetOrderBook_, context, request, true, tag);
 }

@@ -42,6 +42,10 @@ MarketHubServiceV1::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>&
   return ::grpc::internal::ClientReaderFactory< ::ssigmaapi::markethub::v1::GetTradesResponse>::Create(channel_.get(), rpcmethod_GetTrades_, context, request);
 }
 
+void MarketHubServiceV1::Stub::experimental_async::GetTrades(::grpc::ClientContext* context, ::ssigmaapi::markethub::v1::GetTradesRequest* request, ::grpc::experimental::ClientReadReactor< ::ssigmaapi::markethub::v1::GetTradesResponse>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::ssigmaapi::markethub::v1::GetTradesResponse>::Create(stub_->channel_.get(), stub_->rpcmethod_GetTrades_, context, request, reactor);
+}
+
 ::grpc::ClientAsyncReader< ::ssigmaapi::markethub::v1::GetTradesResponse>* MarketHubServiceV1::Stub::AsyncGetTradesRaw(::grpc::ClientContext* context, const ::ssigmaapi::markethub::v1::GetTradesRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
   return ::grpc::internal::ClientAsyncReaderFactory< ::ssigmaapi::markethub::v1::GetTradesResponse>::Create(channel_.get(), cq, rpcmethod_GetTrades_, context, request, true, tag);
 }
@@ -54,6 +58,10 @@ MarketHubServiceV1::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>&
   return ::grpc::internal::ClientReaderFactory< ::ssigmaapi::markethub::v1::GetOrderBooksResponse>::Create(channel_.get(), rpcmethod_GetOrderBooks_, context, request);
 }
 
+void MarketHubServiceV1::Stub::experimental_async::GetOrderBooks(::grpc::ClientContext* context, ::ssigmaapi::markethub::v1::GetOrderBooksRequest* request, ::grpc::experimental::ClientReadReactor< ::ssigmaapi::markethub::v1::GetOrderBooksResponse>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::ssigmaapi::markethub::v1::GetOrderBooksResponse>::Create(stub_->channel_.get(), stub_->rpcmethod_GetOrderBooks_, context, request, reactor);
+}
+
 ::grpc::ClientAsyncReader< ::ssigmaapi::markethub::v1::GetOrderBooksResponse>* MarketHubServiceV1::Stub::AsyncGetOrderBooksRaw(::grpc::ClientContext* context, const ::ssigmaapi::markethub::v1::GetOrderBooksRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
   return ::grpc::internal::ClientAsyncReaderFactory< ::ssigmaapi::markethub::v1::GetOrderBooksResponse>::Create(channel_.get(), cq, rpcmethod_GetOrderBooks_, context, request, true, tag);
 }
@@ -64,6 +72,10 @@ MarketHubServiceV1::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>&
 
 ::grpc::ClientReader< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse>* MarketHubServiceV1::Stub::GetTradesAndOrderBooksRaw(::grpc::ClientContext* context, const ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest& request) {
   return ::grpc::internal::ClientReaderFactory< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse>::Create(channel_.get(), rpcmethod_GetTradesAndOrderBooks_, context, request);
+}
+
+void MarketHubServiceV1::Stub::experimental_async::GetTradesAndOrderBooks(::grpc::ClientContext* context, ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest* request, ::grpc::experimental::ClientReadReactor< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse>::Create(stub_->channel_.get(), stub_->rpcmethod_GetTradesAndOrderBooks_, context, request, reactor);
 }
 
 ::grpc::ClientAsyncReader< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse>* MarketHubServiceV1::Stub::AsyncGetTradesAndOrderBooksRaw(::grpc::ClientContext* context, const ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest& request, ::grpc::CompletionQueue* cq, void* tag) {

@@ -10,6 +10,7 @@
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
+#include <grpcpp/impl/codegen/client_callback.h>
 #include <grpcpp/impl/codegen/method_handler_impl.h>
 #include <grpcpp/impl/codegen/proto_utils.h>
 #include <grpcpp/impl/codegen/rpc_method.h>
@@ -50,6 +51,7 @@ class PashiriRestServiceV1 final {
     class experimental_async_interface {
      public:
       virtual ~experimental_async_interface() {}
+      virtual void GetOrderBook(::grpc::ClientContext* context, ::ssigmaapi::type::Market* request, ::grpc::experimental::ClientReadReactor< ::ssigmaapi::type::OrderBook>* reactor) = 0;
     };
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
@@ -72,6 +74,7 @@ class PashiriRestServiceV1 final {
     class experimental_async final :
       public StubInterface::experimental_async_interface {
      public:
+      void GetOrderBook(::grpc::ClientContext* context, ::ssigmaapi::type::Market* request, ::grpc::experimental::ClientReadReactor< ::ssigmaapi::type::OrderBook>* reactor) override;
      private:
       friend class Stub;
       explicit experimental_async(Stub* stub): stub_(stub) { }
@@ -123,6 +126,9 @@ class PashiriRestServiceV1 final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     ExperimentalWithCallbackMethod_GetOrderBook() {
+      ::grpc::Service::experimental().MarkMethodCallback(0,
+        new ::grpc::internal::CallbackServerStreamingHandler< ::ssigmaapi::type::Market, ::ssigmaapi::type::OrderBook>(
+          [this] { return this->GetOrderBook(); }));
     }
     ~ExperimentalWithCallbackMethod_GetOrderBook() override {
       BaseClassMustBeDerivedFromService(this);
@@ -132,6 +138,9 @@ class PashiriRestServiceV1 final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    virtual ::grpc::experimental::ServerWriteReactor< ::ssigmaapi::type::Market, ::ssigmaapi::type::OrderBook>* GetOrderBook() {
+      return new ::grpc::internal::UnimplementedWriteReactor<
+        ::ssigmaapi::type::Market, ::ssigmaapi::type::OrderBook>;}
   };
   typedef ExperimentalWithCallbackMethod_GetOrderBook<Service > ExperimentalCallbackService;
   template <class BaseClass>
@@ -177,6 +186,9 @@ class PashiriRestServiceV1 final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     ExperimentalWithRawCallbackMethod_GetOrderBook() {
+      ::grpc::Service::experimental().MarkMethodRawCallback(0,
+        new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          [this] { return this->GetOrderBook(); }));
     }
     ~ExperimentalWithRawCallbackMethod_GetOrderBook() override {
       BaseClassMustBeDerivedFromService(this);
@@ -186,6 +198,9 @@ class PashiriRestServiceV1 final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    virtual ::grpc::experimental::ServerWriteReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetOrderBook() {
+      return new ::grpc::internal::UnimplementedWriteReactor<
+        ::grpc::ByteBuffer, ::grpc::ByteBuffer>;}
   };
   typedef Service StreamedUnaryService;
   template <class BaseClass>
