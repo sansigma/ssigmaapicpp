@@ -72,13 +72,13 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 const char descriptor_table_protodef_ssigmaapi_2ftype_2fmarket_2eproto[] =
   "\n\033ssigmaapi/type/market.proto\022\016ssigmaapi"
   ".type\"*\n\006Market\022\016\n\006symbol\030\001 \001(\t\022\020\n\010excha"
-  "nge\030\002 \001(\tB2Z0github.com/kaito2/ssigmaapi"
-  "go/type/market;marketb\006proto3"
+  "nge\030\002 \001(\tB4Z2github.com/sansigma/ssigmaa"
+  "pigo/type/market;marketb\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_ssigmaapi_2ftype_2fmarket_2eproto = {
   false, InitDefaults_ssigmaapi_2ftype_2fmarket_2eproto, 
   descriptor_table_protodef_ssigmaapi_2ftype_2fmarket_2eproto,
-  "ssigmaapi/type/market.proto", &assign_descriptors_table_ssigmaapi_2ftype_2fmarket_2eproto, 149,
+  "ssigmaapi/type/market.proto", &assign_descriptors_table_ssigmaapi_2ftype_2fmarket_2eproto, 151,
 };
 
 void AddDescriptors_ssigmaapi_2ftype_2fmarket_2eproto() {

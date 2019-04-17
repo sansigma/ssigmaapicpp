@@ -111,14 +111,14 @@ const char descriptor_table_protodef_ssigmaapi_2ftype_2forderbook_2eproto[] =
   "\t\022\014\n\004base\030\002 \001(\t\022\r\n\005quote\030\003 \001(\t\022\016\n\006symbol"
   "\030\004 \001(\t\022$\n\004bids\030\005 \003(\0132\026.ssigmaapi.type.Bi"
   "dAsk\022$\n\004asks\030\006 \003(\0132\026.ssigmaapi.type.BidA"
-  "sk\022\021\n\ttimestamp\030\007 \001(\003B8Z6github.com/kait"
-  "o2/ssigmaapigo/type/orderbook;orderbookb"
-  "\006proto3"
+  "sk\022\021\n\ttimestamp\030\007 \001(\003B:Z8github.com/sans"
+  "igma/ssigmaapigo/type/orderbook;orderboo"
+  "kb\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_ssigmaapi_2ftype_2forderbook_2eproto = {
   false, InitDefaults_ssigmaapi_2ftype_2forderbook_2eproto, 
   descriptor_table_protodef_ssigmaapi_2ftype_2forderbook_2eproto,
-  "ssigmaapi/type/orderbook.proto", &assign_descriptors_table_ssigmaapi_2ftype_2forderbook_2eproto, 327,
+  "ssigmaapi/type/orderbook.proto", &assign_descriptors_table_ssigmaapi_2ftype_2forderbook_2eproto, 329,
 };
 
 void AddDescriptors_ssigmaapi_2ftype_2forderbook_2eproto() {

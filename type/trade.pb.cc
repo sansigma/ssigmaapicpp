@@ -112,13 +112,13 @@ const char descriptor_table_protodef_ssigmaapi_2ftype_2ftrade_2eproto[] =
   "\020\n\010trade_id\030\002 \001(\t\022\020\n\010exchange\030\003 \001(\t\022\014\n\004b"
   "ase\030\004 \001(\t\022\r\n\005quote\030\005 \001(\t\022\r\n\005price\030\006 \001(\001\022"
   "\016\n\006amount\030\007 \001(\001\022\021\n\ttimestamp\030\010 \001(\003\022\014\n\004si"
-  "de\030\t \001(\tB0Z.github.com/kaito2/ssigmaapig"
-  "o/type/trade;tradeb\006proto3"
+  "de\030\t \001(\tB2Z0github.com/sansigma/ssigmaap"
+  "igo/type/trade;tradeb\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_ssigmaapi_2ftype_2ftrade_2eproto = {
   false, InitDefaults_ssigmaapi_2ftype_2ftrade_2eproto, 
   descriptor_table_protodef_ssigmaapi_2ftype_2ftrade_2eproto,
-  "ssigmaapi/type/trade.proto", &assign_descriptors_table_ssigmaapi_2ftype_2ftrade_2eproto, 306,
+  "ssigmaapi/type/trade.proto", &assign_descriptors_table_ssigmaapi_2ftype_2ftrade_2eproto, 308,
 };
 
 void AddDescriptors_ssigmaapi_2ftype_2ftrade_2eproto() {

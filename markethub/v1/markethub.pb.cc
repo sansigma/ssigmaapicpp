@@ -385,13 +385,13 @@ const char descriptor_table_protodef_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2epr
   "ndOrderBooksRequest\0326.ssigmaapi.markethu"
   "b.v1.GetTradesAndOrderBooksResponse\"4\202\323\344"
   "\223\002.\")/v1/market-hub/get-trades-and-order"
-  "-books:\001*0\001B6Z4github.com/kaito2/ssigmaa"
-  "pigo/markethub/v1;markethubb\006proto3"
+  "-books:\001*0\001B8Z6github.com/sansigma/ssigm"
+  "aapigo/markethub/v1;markethubb\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto = {
   false, InitDefaults_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto, 
   descriptor_table_protodef_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto,
-  "ssigmaapi/markethub/v1/markethub.proto", &assign_descriptors_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto, 2235,
+  "ssigmaapi/markethub/v1/markethub.proto", &assign_descriptors_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto, 2237,
 };
 
 void AddDescriptors_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto() {

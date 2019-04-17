@@ -44,14 +44,14 @@ const char descriptor_table_protodef_ssigmaapi_2fpashiriwebsocket_2fv1_2fpashiri
   "et.v1\032\033ssigmaapi/type/market.proto\032\032ssig"
   "maapi/type/trade.proto2\\\n\031PashiriWebsock"
   "etServiceV1\022\?\n\tGetTrades\022\026.ssigmaapi.typ"
-  "e.Market\032\026.ssigmaapi.type.Trades\"\0000\001BDZB"
-  "github.com/kaito2/ssigmaapigo/pashiriweb"
-  "socket/v1;pashiriwebsocketb\006proto3"
+  "e.Market\032\026.ssigmaapi.type.Trades\"\0000\001BFZD"
+  "github.com/sansigma/ssigmaapigo/pashiriw"
+  "ebsocket/v1;pashiriwebsocketb\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_ssigmaapi_2fpashiriwebsocket_2fv1_2fpashiriwebsocket_2eproto = {
   false, InitDefaults_ssigmaapi_2fpashiriwebsocket_2fv1_2fpashiriwebsocket_2eproto, 
   descriptor_table_protodef_ssigmaapi_2fpashiriwebsocket_2fv1_2fpashiriwebsocket_2eproto,
-  "ssigmaapi/pashiriwebsocket/v1/pashiriwebsocket.proto", &assign_descriptors_table_ssigmaapi_2fpashiriwebsocket_2fv1_2fpashiriwebsocket_2eproto, 314,
+  "ssigmaapi/pashiriwebsocket/v1/pashiriwebsocket.proto", &assign_descriptors_table_ssigmaapi_2fpashiriwebsocket_2fv1_2fpashiriwebsocket_2eproto, 316,
 };
 
 void AddDescriptors_ssigmaapi_2fpashiriwebsocket_2fv1_2fpashiriwebsocket_2eproto() {

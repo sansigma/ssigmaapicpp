@@ -44,14 +44,14 @@ const char descriptor_table_protodef_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_
   "i/type/market.proto\032\036ssigmaapi/type/orde"
   "rbook.proto2]\n\024PashiriRestServiceV1\022E\n\014G"
   "etOrderBook\022\026.ssigmaapi.type.Market\032\031.ss"
-  "igmaapi.type.OrderBook\"\0000\001B:Z8github.com"
-  "/kaito2/ssigmaapigo/pashirirest/v1;pashi"
-  "rirestb\006proto3"
+  "igmaapi.type.OrderBook\"\0000\001B<Z:github.com"
+  "/sansigma/ssigmaapigo/pashirirest/v1;pas"
+  "hirirestb\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto = {
   false, InitDefaults_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto, 
   descriptor_table_protodef_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto,
-  "ssigmaapi/pashirirest/v1/pashirirest.proto", &assign_descriptors_table_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto, 294,
+  "ssigmaapi/pashirirest/v1/pashirirest.proto", &assign_descriptors_table_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto, 296,
 };
 
 void AddDescriptors_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto() {
