@@ -38,6 +38,10 @@ PashiriWebsocketServiceV1::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInte
   return ::grpc::internal::ClientReaderFactory< ::ssigmaapi::type::Trades>::Create(channel_.get(), rpcmethod_GetTrades_, context, request);
 }
 
+void PashiriWebsocketServiceV1::Stub::experimental_async::GetTrades(::grpc::ClientContext* context, ::ssigmaapi::type::Market* request, ::grpc::experimental::ClientReadReactor< ::ssigmaapi::type::Trades>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::ssigmaapi::type::Trades>::Create(stub_->channel_.get(), stub_->rpcmethod_GetTrades_, context, request, reactor);
+}
+
 ::grpc::ClientAsyncReader< ::ssigmaapi::type::Trades>* PashiriWebsocketServiceV1::Stub::AsyncGetTradesRaw(::grpc::ClientContext* context, const ::ssigmaapi::type::Market& request, ::grpc::CompletionQueue* cq, void* tag) {
   return ::grpc::internal::ClientAsyncReaderFactory< ::ssigmaapi::type::Trades>::Create(channel_.get(), cq, rpcmethod_GetTrades_, context, request, true, tag);
 }

@@ -6,18 +6,15 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
 namespace ssigmaapi {
 namespace pashirirest {
@@ -25,62 +22,49 @@ namespace v1 {
 }  // namespace v1
 }  // namespace pashirirest
 }  // namespace ssigmaapi
-namespace protobuf_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto {
-void InitDefaults() {
+void InitDefaults_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto() {
 }
 
-const ::google::protobuf::uint32 TableStruct::offsets[1] = {};
-static const ::google::protobuf::internal::MigrationSchema* schemas = NULL;
-static const ::google::protobuf::Message* const* file_default_instances = NULL;
+constexpr ::google::protobuf::Metadata* file_level_metadata_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto = nullptr;
+constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto = nullptr;
+constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto = nullptr;
+const ::google::protobuf::uint32 TableStruct_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto::offsets[1] = {};
+static constexpr ::google::protobuf::internal::MigrationSchema* schemas = nullptr;
+static constexpr ::google::protobuf::Message* const* file_default_instances = nullptr;
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "ssigmaapi/pashirirest/v1/pashirirest.proto", schemas, file_default_instances, TableStruct::offsets,
-      NULL, NULL, NULL);
-}
+::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto = {
+  {}, AddDescriptors_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto, "ssigmaapi/pashirirest/v1/pashirirest.proto", schemas,
+  file_default_instances, TableStruct_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto::offsets,
+  file_level_metadata_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto, 0, file_level_enum_descriptors_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto, file_level_service_descriptors_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto,
+};
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
+const char descriptor_table_protodef_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto[] =
+  "\n*ssigmaapi/pashirirest/v1/pashirirest.p"
+  "roto\022\030ssigmaapi.pashirirest.v1\032\033ssigmaap"
+  "i/type/market.proto\032\036ssigmaapi/type/orde"
+  "rbook.proto2]\n\024PashiriRestServiceV1\022E\n\014G"
+  "etOrderBook\022\026.ssigmaapi.type.Market\032\031.ss"
+  "igmaapi.type.OrderBook\"\0000\001B:Z8github.com"
+  "/kaito2/ssigmaapigo/pashirirest/v1;pashi"
+  "rirestb\006proto3"
+  ;
+::google::protobuf::internal::DescriptorTable descriptor_table_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto = {
+  false, InitDefaults_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto, 
+  descriptor_table_protodef_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto,
+  "ssigmaapi/pashirirest/v1/pashirirest.proto", &assign_descriptors_table_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto, 294,
+};
 
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n*ssigmaapi/pashirirest/v1/pashirirest.p"
-      "roto\022\030ssigmaapi.pashirirest.v1\032\033ssigmaap"
-      "i/type/market.proto\032\036ssigmaapi/type/orde"
-      "rbook.proto2]\n\024PashiriRestServiceV1\022E\n\014G"
-      "etOrderBook\022\026.ssigmaapi.type.Market\032\031.ss"
-      "igmaapi.type.OrderBook\"\0000\001B:Z8github.com"
-      "/kaito2/ssigmaapigo/pashirirest/v1;pashi"
-      "rirestb\006proto3"
+void AddDescriptors_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto() {
+  static constexpr ::google::protobuf::internal::InitFunc deps[2] =
+  {
+    ::AddDescriptors_ssigmaapi_2ftype_2fmarket_2eproto,
+    ::AddDescriptors_ssigmaapi_2ftype_2forderbook_2eproto,
   };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 294);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "ssigmaapi/pashirirest/v1/pashirirest.proto", &protobuf_RegisterTypes);
-  ::protobuf_ssigmaapi_2ftype_2fmarket_2eproto::AddDescriptors();
-  ::protobuf_ssigmaapi_2ftype_2forderbook_2eproto::AddDescriptors();
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto, deps, 2);
 }
 
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+static bool dynamic_init_dummy_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto = []() { AddDescriptors_ssigmaapi_2fpashirirest_2fv1_2fpashirirest_2eproto(); return true; }();
 namespace ssigmaapi {
 namespace pashirirest {
 namespace v1 {
@@ -95,3 +79,4 @@ namespace protobuf {
 }  // namespace google
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

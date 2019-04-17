@@ -6,90 +6,69 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ExchangeStatus;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_GetOrderBooksRequest;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_GetTradesRequest;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_TradeWithAdditionalInfo;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_GetOrderBooksResponse;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_GetTradesResponse;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_TradesWithMarket;
-}  // namespace protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto
-namespace protobuf_ssigmaapi_2ftype_2fmarket_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_ssigmaapi_2ftype_2fmarket_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Market;
-}  // namespace protobuf_ssigmaapi_2ftype_2fmarket_2eproto
-namespace protobuf_ssigmaapi_2ftype_2forderbook_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_ssigmaapi_2ftype_2forderbook_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_OrderBook;
-}  // namespace protobuf_ssigmaapi_2ftype_2forderbook_2eproto
-namespace protobuf_ssigmaapi_2ftype_2ftrade_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_ssigmaapi_2ftype_2ftrade_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Trade;
-}  // namespace protobuf_ssigmaapi_2ftype_2ftrade_2eproto
+extern PROTOBUF_INTERNAL_EXPORT_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ExchangeStatus_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_GetOrderBooksRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_GetTradesRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_TradeWithAdditionalInfo_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_GetOrderBooksResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_GetTradesResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_TradesWithMarket_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_ssigmaapi_2ftype_2fmarket_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Market_ssigmaapi_2ftype_2fmarket_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_ssigmaapi_2ftype_2forderbook_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_OrderBook_ssigmaapi_2ftype_2forderbook_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_ssigmaapi_2ftype_2ftrade_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Trade_ssigmaapi_2ftype_2ftrade_2eproto;
 namespace ssigmaapi {
 namespace markethub {
 namespace v1 {
 class GetTradesRequestDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<GetTradesRequest>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<GetTradesRequest> _instance;
 } _GetTradesRequest_default_instance_;
 class GetTradesResponseDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<GetTradesResponse>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<GetTradesResponse> _instance;
 } _GetTradesResponse_default_instance_;
 class GetOrderBooksRequestDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<GetOrderBooksRequest>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<GetOrderBooksRequest> _instance;
 } _GetOrderBooksRequest_default_instance_;
 class GetOrderBooksResponseDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<GetOrderBooksResponse>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<GetOrderBooksResponse> _instance;
 } _GetOrderBooksResponse_default_instance_;
 class GetTradesAndOrderBooksRequestDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<GetTradesAndOrderBooksRequest>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<GetTradesAndOrderBooksRequest> _instance;
 } _GetTradesAndOrderBooksRequest_default_instance_;
 class GetTradesAndOrderBooksResponseDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<GetTradesAndOrderBooksResponse>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<GetTradesAndOrderBooksResponse> _instance;
 } _GetTradesAndOrderBooksResponse_default_instance_;
 class TradeWithAdditionalInfoDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<TradeWithAdditionalInfo>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<TradeWithAdditionalInfo> _instance;
 } _TradeWithAdditionalInfo_default_instance_;
 class TradesWithMarketDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<TradesWithMarket>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<TradesWithMarket> _instance;
 } _TradesWithMarket_default_instance_;
 class ExchangeStatusDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<ExchangeStatus>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<ExchangeStatus> _instance;
 } _ExchangeStatus_default_instance_;
 }  // namespace v1
 }  // namespace markethub
 }  // namespace ssigmaapi
-namespace protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto {
-static void InitDefaultsGetTradesRequest() {
+static void InitDefaultsGetTradesRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -100,11 +79,11 @@ static void InitDefaultsGetTradesRequest() {
   ::ssigmaapi::markethub::v1::GetTradesRequest::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_GetTradesRequest =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsGetTradesRequest}, {
-      &protobuf_ssigmaapi_2ftype_2fmarket_2eproto::scc_info_Market.base,}};
+::google::protobuf::internal::SCCInfo<1> scc_info_GetTradesRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsGetTradesRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto}, {
+      &scc_info_Market_ssigmaapi_2ftype_2fmarket_2eproto.base,}};
 
-static void InitDefaultsGetTradesResponse() {
+static void InitDefaultsGetTradesResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -115,12 +94,12 @@ static void InitDefaultsGetTradesResponse() {
   ::ssigmaapi::markethub::v1::GetTradesResponse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<2> scc_info_GetTradesResponse =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsGetTradesResponse}, {
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_TradesWithMarket.base,
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_ExchangeStatus.base,}};
+::google::protobuf::internal::SCCInfo<2> scc_info_GetTradesResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsGetTradesResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto}, {
+      &scc_info_TradesWithMarket_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base,
+      &scc_info_ExchangeStatus_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base,}};
 
-static void InitDefaultsGetOrderBooksRequest() {
+static void InitDefaultsGetOrderBooksRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -131,11 +110,11 @@ static void InitDefaultsGetOrderBooksRequest() {
   ::ssigmaapi::markethub::v1::GetOrderBooksRequest::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_GetOrderBooksRequest =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsGetOrderBooksRequest}, {
-      &protobuf_ssigmaapi_2ftype_2fmarket_2eproto::scc_info_Market.base,}};
+::google::protobuf::internal::SCCInfo<1> scc_info_GetOrderBooksRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsGetOrderBooksRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto}, {
+      &scc_info_Market_ssigmaapi_2ftype_2fmarket_2eproto.base,}};
 
-static void InitDefaultsGetOrderBooksResponse() {
+static void InitDefaultsGetOrderBooksResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -146,12 +125,12 @@ static void InitDefaultsGetOrderBooksResponse() {
   ::ssigmaapi::markethub::v1::GetOrderBooksResponse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<2> scc_info_GetOrderBooksResponse =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsGetOrderBooksResponse}, {
-      &protobuf_ssigmaapi_2ftype_2forderbook_2eproto::scc_info_OrderBook.base,
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_ExchangeStatus.base,}};
+::google::protobuf::internal::SCCInfo<2> scc_info_GetOrderBooksResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsGetOrderBooksResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto}, {
+      &scc_info_OrderBook_ssigmaapi_2ftype_2forderbook_2eproto.base,
+      &scc_info_ExchangeStatus_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base,}};
 
-static void InitDefaultsGetTradesAndOrderBooksRequest() {
+static void InitDefaultsGetTradesAndOrderBooksRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -162,12 +141,12 @@ static void InitDefaultsGetTradesAndOrderBooksRequest() {
   ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<2> scc_info_GetTradesAndOrderBooksRequest =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsGetTradesAndOrderBooksRequest}, {
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetTradesRequest.base,
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetOrderBooksRequest.base,}};
+::google::protobuf::internal::SCCInfo<2> scc_info_GetTradesAndOrderBooksRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsGetTradesAndOrderBooksRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto}, {
+      &scc_info_GetTradesRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base,
+      &scc_info_GetOrderBooksRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base,}};
 
-static void InitDefaultsGetTradesAndOrderBooksResponse() {
+static void InitDefaultsGetTradesAndOrderBooksResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -178,13 +157,13 @@ static void InitDefaultsGetTradesAndOrderBooksResponse() {
   ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<3> scc_info_GetTradesAndOrderBooksResponse =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsGetTradesAndOrderBooksResponse}, {
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetTradesResponse.base,
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetOrderBooksResponse.base,
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_ExchangeStatus.base,}};
+::google::protobuf::internal::SCCInfo<3> scc_info_GetTradesAndOrderBooksResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsGetTradesAndOrderBooksResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto}, {
+      &scc_info_GetTradesResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base,
+      &scc_info_GetOrderBooksResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base,
+      &scc_info_ExchangeStatus_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base,}};
 
-static void InitDefaultsTradeWithAdditionalInfo() {
+static void InitDefaultsTradeWithAdditionalInfo_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -195,11 +174,11 @@ static void InitDefaultsTradeWithAdditionalInfo() {
   ::ssigmaapi::markethub::v1::TradeWithAdditionalInfo::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_TradeWithAdditionalInfo =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsTradeWithAdditionalInfo}, {
-      &protobuf_ssigmaapi_2ftype_2ftrade_2eproto::scc_info_Trade.base,}};
+::google::protobuf::internal::SCCInfo<1> scc_info_TradeWithAdditionalInfo_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsTradeWithAdditionalInfo_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto}, {
+      &scc_info_Trade_ssigmaapi_2ftype_2ftrade_2eproto.base,}};
 
-static void InitDefaultsTradesWithMarket() {
+static void InitDefaultsTradesWithMarket_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -210,12 +189,12 @@ static void InitDefaultsTradesWithMarket() {
   ::ssigmaapi::markethub::v1::TradesWithMarket::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<2> scc_info_TradesWithMarket =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsTradesWithMarket}, {
-      &protobuf_ssigmaapi_2ftype_2fmarket_2eproto::scc_info_Market.base,
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_TradeWithAdditionalInfo.base,}};
+::google::protobuf::internal::SCCInfo<2> scc_info_TradesWithMarket_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsTradesWithMarket_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto}, {
+      &scc_info_Market_ssigmaapi_2ftype_2fmarket_2eproto.base,
+      &scc_info_TradeWithAdditionalInfo_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base,}};
 
-static void InitDefaultsExchangeStatus() {
+static void InitDefaultsExchangeStatus_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -226,100 +205,102 @@ static void InitDefaultsExchangeStatus() {
   ::ssigmaapi::markethub::v1::ExchangeStatus::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_ExchangeStatus =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsExchangeStatus}, {}};
+::google::protobuf::internal::SCCInfo<0> scc_info_ExchangeStatus_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsExchangeStatus_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto}, {}};
 
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_GetTradesRequest.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_GetTradesResponse.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_GetOrderBooksRequest.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_GetOrderBooksResponse.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_GetTradesAndOrderBooksRequest.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_GetTradesAndOrderBooksResponse.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_TradeWithAdditionalInfo.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_TradesWithMarket.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_ExchangeStatus.base);
+void InitDefaults_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto() {
+  ::google::protobuf::internal::InitSCC(&scc_info_GetTradesRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GetTradesResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GetOrderBooksRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GetOrderBooksResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GetTradesAndOrderBooksRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GetTradesAndOrderBooksResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_TradeWithAdditionalInfo_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_TradesWithMarket_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ExchangeStatus_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[9];
+::google::protobuf::Metadata file_level_metadata_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto[9];
+constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto = nullptr;
+constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto = nullptr;
 
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const ::google::protobuf::uint32 TableStruct_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesRequest, markets_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesRequest, velocity_windowing_size_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesRequest, volatility_windowing_size_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesRequest, volume_windowing_size_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesRequest, markets_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesRequest, velocity_windowing_size_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesRequest, volatility_windowing_size_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesRequest, volume_windowing_size_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesResponse, trades_with_market_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesResponse, exchange_status_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesResponse, trades_with_market_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesResponse, exchange_status_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetOrderBooksRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetOrderBooksRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetOrderBooksRequest, market_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetOrderBooksRequest, market_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetOrderBooksResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetOrderBooksResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetOrderBooksResponse, all_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetOrderBooksResponse, timestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetOrderBooksResponse, exchange_status_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetOrderBooksResponse, all_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetOrderBooksResponse, timestamp_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetOrderBooksResponse, exchange_status_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest, trades_req_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest, orderbooks_req_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest, trades_req_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest, orderbooks_req_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse, trades_res_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse, orderbooks_res_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse, exchange_status_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse, trades_res_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse, orderbooks_res_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse, exchange_status_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, trade_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, velocity_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, acceleration_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, volatility_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, volume_base_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, volume_quote_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, momentum_rate_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, velocity_windowing_size_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, volatility_windowing_size_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, volume_windowing_size_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, trade_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, velocity_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, acceleration_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, volatility_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, volume_base_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, volume_quote_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, momentum_rate_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, velocity_windowing_size_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, volatility_windowing_size_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradeWithAdditionalInfo, volume_windowing_size_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradesWithMarket, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradesWithMarket, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradesWithMarket, market_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradesWithMarket, trades_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradesWithMarket, market_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::TradesWithMarket, trades_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::ExchangeStatus, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::ExchangeStatus, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::ExchangeStatus, exchange_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ssigmaapi::markethub::v1::ExchangeStatus, open_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::ExchangeStatus, exchange_),
+  PROTOBUF_FIELD_OFFSET(::ssigmaapi::markethub::v1::ExchangeStatus, open_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::ssigmaapi::markethub::v1::GetTradesRequest)},
   { 9, -1, sizeof(::ssigmaapi::markethub::v1::GetTradesResponse)},
   { 16, -1, sizeof(::ssigmaapi::markethub::v1::GetOrderBooksRequest)},
@@ -343,105 +324,89 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::ssigmaapi::markethub::v1::_ExchangeStatus_default_instance_),
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "ssigmaapi/markethub/v1/markethub.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, NULL, NULL);
-}
+::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto = {
+  {}, AddDescriptors_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto, "ssigmaapi/markethub/v1/markethub.proto", schemas,
+  file_default_instances, TableStruct_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::offsets,
+  file_level_metadata_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto, 9, file_level_enum_descriptors_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto, file_level_service_descriptors_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto,
+};
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
+const char descriptor_table_protodef_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto[] =
+  "\n&ssigmaapi/markethub/v1/markethub.proto"
+  "\022\026ssigmaapi.markethub.v1\032\033ssigmaapi/type"
+  "/market.proto\032\032ssigmaapi/type/trade.prot"
+  "o\032\036ssigmaapi/type/orderbook.proto\032\034googl"
+  "e/api/annotations.proto\"\236\001\n\020GetTradesReq"
+  "uest\022\'\n\007markets\030\001 \003(\0132\026.ssigmaapi.type.M"
+  "arket\022\037\n\027velocity_windowing_size\030\002 \001(\003\022!"
+  "\n\031volatility_windowing_size\030\003 \001(\003\022\035\n\025vol"
+  "ume_windowing_size\030\004 \001(\003\"\232\001\n\021GetTradesRe"
+  "sponse\022D\n\022trades_with_market\030\001 \003(\0132(.ssi"
+  "gmaapi.markethub.v1.TradesWithMarket\022\?\n\017"
+  "exchange_status\030\002 \003(\0132&.ssigmaapi.market"
+  "hub.v1.ExchangeStatus\">\n\024GetOrderBooksRe"
+  "quest\022&\n\006market\030\001 \003(\0132\026.ssigmaapi.type.M"
+  "arket\"\223\001\n\025GetOrderBooksResponse\022&\n\003all\030\001"
+  " \003(\0132\031.ssigmaapi.type.OrderBook\022\021\n\ttimes"
+  "tamp\030\002 \001(\003\022\?\n\017exchange_status\030\003 \003(\0132&.ss"
+  "igmaapi.markethub.v1.ExchangeStatus\"\243\001\n\035"
+  "GetTradesAndOrderBooksRequest\022<\n\ntrades_"
+  "req\030\001 \001(\0132(.ssigmaapi.markethub.v1.GetTr"
+  "adesRequest\022D\n\016orderbooks_req\030\002 \001(\0132,.ss"
+  "igmaapi.markethub.v1.GetOrderBooksReques"
+  "t\"\347\001\n\036GetTradesAndOrderBooksResponse\022=\n\n"
+  "trades_res\030\001 \001(\0132).ssigmaapi.markethub.v"
+  "1.GetTradesResponse\022E\n\016orderbooks_res\030\002 "
+  "\001(\0132-.ssigmaapi.markethub.v1.GetOrderBoo"
+  "ksResponse\022\?\n\017exchange_status\030\003 \003(\0132&.ss"
+  "igmaapi.markethub.v1.ExchangeStatus\"\240\002\n\027"
+  "TradeWithAdditionalInfo\022$\n\005trade\030\001 \001(\0132\025"
+  ".ssigmaapi.type.Trade\022\020\n\010velocity\030\002 \001(\001\022"
+  "\024\n\014acceleration\030\003 \001(\001\022\022\n\nvolatility\030\004 \001("
+  "\001\022\023\n\013volume_base\030\005 \001(\001\022\024\n\014volume_quote\030\006"
+  " \001(\001\022\025\n\rmomentum_rate\030\007 \001(\001\022\037\n\027velocity_"
+  "windowing_size\030\010 \001(\003\022!\n\031volatility_windo"
+  "wing_size\030\t \001(\003\022\035\n\025volume_windowing_size"
+  "\030\n \001(\003\"{\n\020TradesWithMarket\022&\n\006market\030\001 \001"
+  "(\0132\026.ssigmaapi.type.Market\022\?\n\006trades\030\002 \003"
+  "(\0132/.ssigmaapi.markethub.v1.TradeWithAdd"
+  "itionalInfo\"0\n\016ExchangeStatus\022\020\n\010exchang"
+  "e\030\001 \001(\t\022\014\n\004open\030\002 \001(\0102\313\004\n\022MarketHubServi"
+  "ceV1\022\326\001\n\tGetTrades\022(.ssigmaapi.markethub"
+  ".v1.GetTradesRequest\032).ssigmaapi.marketh"
+  "ub.v1.GetTradesResponse\"r\202\323\344\223\002l\"g/v1/mar"
+  "ket-hub/get-trades/{velocity_windowing_s"
+  "ize}/{volatility_windowing_size}/{volume"
+  "_windowing_size}:\001*0\001\022\231\001\n\rGetOrderBooks\022"
+  ",.ssigmaapi.markethub.v1.GetOrderBooksRe"
+  "quest\032-.ssigmaapi.markethub.v1.GetOrderB"
+  "ooksResponse\")\202\323\344\223\002#\"\036/v1/market-hub/get"
+  "-order-books:\001*0\001\022\277\001\n\026GetTradesAndOrderB"
+  "ooks\0225.ssigmaapi.markethub.v1.GetTradesA"
+  "ndOrderBooksRequest\0326.ssigmaapi.markethu"
+  "b.v1.GetTradesAndOrderBooksResponse\"4\202\323\344"
+  "\223\002.\")/v1/market-hub/get-trades-and-order"
+  "-books:\001*0\001B6Z4github.com/kaito2/ssigmaa"
+  "pigo/markethub/v1;markethubb\006proto3"
+  ;
+::google::protobuf::internal::DescriptorTable descriptor_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto = {
+  false, InitDefaults_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto, 
+  descriptor_table_protodef_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto,
+  "ssigmaapi/markethub/v1/markethub.proto", &assign_descriptors_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto, 2235,
+};
 
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 9);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n&ssigmaapi/markethub/v1/markethub.proto"
-      "\022\026ssigmaapi.markethub.v1\032\033ssigmaapi/type"
-      "/market.proto\032\032ssigmaapi/type/trade.prot"
-      "o\032\036ssigmaapi/type/orderbook.proto\032\034googl"
-      "e/api/annotations.proto\"\236\001\n\020GetTradesReq"
-      "uest\022\'\n\007markets\030\001 \003(\0132\026.ssigmaapi.type.M"
-      "arket\022\037\n\027velocity_windowing_size\030\002 \001(\003\022!"
-      "\n\031volatility_windowing_size\030\003 \001(\003\022\035\n\025vol"
-      "ume_windowing_size\030\004 \001(\003\"\232\001\n\021GetTradesRe"
-      "sponse\022D\n\022trades_with_market\030\001 \003(\0132(.ssi"
-      "gmaapi.markethub.v1.TradesWithMarket\022\?\n\017"
-      "exchange_status\030\002 \003(\0132&.ssigmaapi.market"
-      "hub.v1.ExchangeStatus\">\n\024GetOrderBooksRe"
-      "quest\022&\n\006market\030\001 \003(\0132\026.ssigmaapi.type.M"
-      "arket\"\223\001\n\025GetOrderBooksResponse\022&\n\003all\030\001"
-      " \003(\0132\031.ssigmaapi.type.OrderBook\022\021\n\ttimes"
-      "tamp\030\002 \001(\003\022\?\n\017exchange_status\030\003 \003(\0132&.ss"
-      "igmaapi.markethub.v1.ExchangeStatus\"\243\001\n\035"
-      "GetTradesAndOrderBooksRequest\022<\n\ntrades_"
-      "req\030\001 \001(\0132(.ssigmaapi.markethub.v1.GetTr"
-      "adesRequest\022D\n\016orderbooks_req\030\002 \001(\0132,.ss"
-      "igmaapi.markethub.v1.GetOrderBooksReques"
-      "t\"\347\001\n\036GetTradesAndOrderBooksResponse\022=\n\n"
-      "trades_res\030\001 \001(\0132).ssigmaapi.markethub.v"
-      "1.GetTradesResponse\022E\n\016orderbooks_res\030\002 "
-      "\001(\0132-.ssigmaapi.markethub.v1.GetOrderBoo"
-      "ksResponse\022\?\n\017exchange_status\030\003 \003(\0132&.ss"
-      "igmaapi.markethub.v1.ExchangeStatus\"\240\002\n\027"
-      "TradeWithAdditionalInfo\022$\n\005trade\030\001 \001(\0132\025"
-      ".ssigmaapi.type.Trade\022\020\n\010velocity\030\002 \001(\001\022"
-      "\024\n\014acceleration\030\003 \001(\001\022\022\n\nvolatility\030\004 \001("
-      "\001\022\023\n\013volume_base\030\005 \001(\001\022\024\n\014volume_quote\030\006"
-      " \001(\001\022\025\n\rmomentum_rate\030\007 \001(\001\022\037\n\027velocity_"
-      "windowing_size\030\010 \001(\003\022!\n\031volatility_windo"
-      "wing_size\030\t \001(\003\022\035\n\025volume_windowing_size"
-      "\030\n \001(\003\"{\n\020TradesWithMarket\022&\n\006market\030\001 \001"
-      "(\0132\026.ssigmaapi.type.Market\022\?\n\006trades\030\002 \003"
-      "(\0132/.ssigmaapi.markethub.v1.TradeWithAdd"
-      "itionalInfo\"0\n\016ExchangeStatus\022\020\n\010exchang"
-      "e\030\001 \001(\t\022\014\n\004open\030\002 \001(\0102\313\004\n\022MarketHubServi"
-      "ceV1\022\326\001\n\tGetTrades\022(.ssigmaapi.markethub"
-      ".v1.GetTradesRequest\032).ssigmaapi.marketh"
-      "ub.v1.GetTradesResponse\"r\202\323\344\223\002l\"g/v1/mar"
-      "ket-hub/get-trades/{velocity_windowing_s"
-      "ize}/{volatility_windowing_size}/{volume"
-      "_windowing_size}:\001*0\001\022\231\001\n\rGetOrderBooks\022"
-      ",.ssigmaapi.markethub.v1.GetOrderBooksRe"
-      "quest\032-.ssigmaapi.markethub.v1.GetOrderB"
-      "ooksResponse\")\202\323\344\223\002#\"\036/v1/market-hub/get"
-      "-order-books:\001*0\001\022\277\001\n\026GetTradesAndOrderB"
-      "ooks\0225.ssigmaapi.markethub.v1.GetTradesA"
-      "ndOrderBooksRequest\0326.ssigmaapi.markethu"
-      "b.v1.GetTradesAndOrderBooksResponse\"4\202\323\344"
-      "\223\002.\")/v1/market-hub/get-trades-and-order"
-      "-books:\001*0\001B6Z4github.com/kaito2/ssigmaa"
-      "pigo/markethub/v1;markethubb\006proto3"
+void AddDescriptors_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto() {
+  static constexpr ::google::protobuf::internal::InitFunc deps[4] =
+  {
+    ::AddDescriptors_ssigmaapi_2ftype_2fmarket_2eproto,
+    ::AddDescriptors_ssigmaapi_2ftype_2ftrade_2eproto,
+    ::AddDescriptors_ssigmaapi_2ftype_2forderbook_2eproto,
+    ::AddDescriptors_google_2fapi_2fannotations_2eproto,
   };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 2235);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "ssigmaapi/markethub/v1/markethub.proto", &protobuf_RegisterTypes);
-  ::protobuf_ssigmaapi_2ftype_2fmarket_2eproto::AddDescriptors();
-  ::protobuf_ssigmaapi_2ftype_2ftrade_2eproto::AddDescriptors();
-  ::protobuf_ssigmaapi_2ftype_2forderbook_2eproto::AddDescriptors();
-  ::protobuf_google_2fapi_2fannotations_2eproto::AddDescriptors();
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto, deps, 4);
 }
 
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+static bool dynamic_init_dummy_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto = []() { AddDescriptors_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto(); return true; }();
 namespace ssigmaapi {
 namespace markethub {
 namespace v1 {
@@ -450,6 +415,10 @@ namespace v1 {
 
 void GetTradesRequest::InitAsDefaultInstance() {
 }
+class GetTradesRequest::HasBitSetters {
+ public:
+};
+
 void GetTradesRequest::clear_markets() {
   markets_.Clear();
 }
@@ -461,15 +430,13 @@ const int GetTradesRequest::kVolumeWindowingSizeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 GetTradesRequest::GetTradesRequest()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetTradesRequest.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:ssigmaapi.markethub.v1.GetTradesRequest)
 }
 GetTradesRequest::GetTradesRequest(const GetTradesRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
+      _internal_metadata_(nullptr),
       markets_(from.markets_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&velocity_windowing_size_, &from.velocity_windowing_size_,
@@ -479,6 +446,8 @@ GetTradesRequest::GetTradesRequest(const GetTradesRequest& from)
 }
 
 void GetTradesRequest::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GetTradesRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
   ::memset(&velocity_windowing_size_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&volume_windowing_size_) -
       reinterpret_cast<char*>(&velocity_windowing_size_)) + sizeof(volume_windowing_size_));
@@ -495,13 +464,8 @@ void GetTradesRequest::SharedDtor() {
 void GetTradesRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* GetTradesRequest::descriptor() {
-  ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const GetTradesRequest& GetTradesRequest::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetTradesRequest.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_GetTradesRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -519,9 +483,79 @@ void GetTradesRequest::Clear() {
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GetTradesRequest::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GetTradesRequest*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // repeated .ssigmaapi.type.Market markets = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::ssigmaapi::type::Market::_InternalParse;
+          object = msg->add_markets();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 10 && (ptr += 1));
+        break;
+      }
+      // int64 velocity_windowing_size = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
+        msg->set_velocity_windowing_size(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int64 volatility_windowing_size = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 24) goto handle_unusual;
+        msg->set_volatility_windowing_size(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int64 volume_windowing_size = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 32) goto handle_unusual;
+        msg->set_volume_windowing_size(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool GetTradesRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ssigmaapi.markethub.v1.GetTradesRequest)
   for (;;) {
@@ -531,8 +565,7 @@ bool GetTradesRequest::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated .ssigmaapi.type.Market markets = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                 input, add_markets()));
         } else {
@@ -543,8 +576,7 @@ bool GetTradesRequest::MergePartialFromCodedStream(
 
       // int64 velocity_windowing_size = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -557,8 +589,7 @@ bool GetTradesRequest::MergePartialFromCodedStream(
 
       // int64 volatility_windowing_size = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (24 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -571,8 +602,7 @@ bool GetTradesRequest::MergePartialFromCodedStream(
 
       // int64 volume_windowing_size = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (32 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -602,6 +632,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void GetTradesRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -633,16 +664,15 @@ void GetTradesRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(4, this->volume_windowing_size(), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:ssigmaapi.markethub.v1.GetTradesRequest)
 }
 
 ::google::protobuf::uint8* GetTradesRequest::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:ssigmaapi.markethub.v1.GetTradesRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -652,7 +682,7 @@ void GetTradesRequest::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->markets_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, this->markets(static_cast<int>(i)), deterministic, target);
+        1, this->markets(static_cast<int>(i)), target);
   }
 
   // int64 velocity_windowing_size = 2;
@@ -670,9 +700,9 @@ void GetTradesRequest::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(4, this->volume_windowing_size(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ssigmaapi.markethub.v1.GetTradesRequest)
   return target;
@@ -682,11 +712,15 @@ size_t GetTradesRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ssigmaapi.markethub.v1.GetTradesRequest)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .ssigmaapi.type.Market markets = 1;
   {
     unsigned int count = static_cast<unsigned int>(this->markets_size());
@@ -728,9 +762,9 @@ void GetTradesRequest::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ssigmaapi.markethub.v1.GetTradesRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const GetTradesRequest* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const GetTradesRequest>(
+      ::google::protobuf::DynamicCastToGenerated<GetTradesRequest>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssigmaapi.markethub.v1.GetTradesRequest)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -782,16 +816,16 @@ void GetTradesRequest::Swap(GetTradesRequest* other) {
 }
 void GetTradesRequest::InternalSwap(GetTradesRequest* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   CastToBase(&markets_)->InternalSwap(CastToBase(&other->markets_));
   swap(velocity_windowing_size_, other->velocity_windowing_size_);
   swap(volatility_windowing_size_, other->volatility_windowing_size_);
   swap(volume_windowing_size_, other->volume_windowing_size_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata GetTradesRequest::GetMetadata() const {
-  protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto);
+  return ::file_level_metadata_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto[kIndexInFileMessages];
 }
 
 
@@ -799,21 +833,23 @@ void GetTradesRequest::InternalSwap(GetTradesRequest* other) {
 
 void GetTradesResponse::InitAsDefaultInstance() {
 }
+class GetTradesResponse::HasBitSetters {
+ public:
+};
+
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int GetTradesResponse::kTradesWithMarketFieldNumber;
 const int GetTradesResponse::kExchangeStatusFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 GetTradesResponse::GetTradesResponse()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetTradesResponse.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:ssigmaapi.markethub.v1.GetTradesResponse)
 }
 GetTradesResponse::GetTradesResponse(const GetTradesResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
+      _internal_metadata_(nullptr),
       trades_with_market_(from.trades_with_market_),
       exchange_status_(from.exchange_status_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
@@ -821,6 +857,8 @@ GetTradesResponse::GetTradesResponse(const GetTradesResponse& from)
 }
 
 void GetTradesResponse::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GetTradesResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
 }
 
 GetTradesResponse::~GetTradesResponse() {
@@ -834,13 +872,8 @@ void GetTradesResponse::SharedDtor() {
 void GetTradesResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* GetTradesResponse::descriptor() {
-  ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const GetTradesResponse& GetTradesResponse::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetTradesResponse.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_GetTradesResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -856,9 +889,74 @@ void GetTradesResponse::Clear() {
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GetTradesResponse::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GetTradesResponse*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // repeated .ssigmaapi.markethub.v1.TradesWithMarket trades_with_market = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::ssigmaapi::markethub::v1::TradesWithMarket::_InternalParse;
+          object = msg->add_trades_with_market();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 10 && (ptr += 1));
+        break;
+      }
+      // repeated .ssigmaapi.markethub.v1.ExchangeStatus exchange_status = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::ssigmaapi::markethub::v1::ExchangeStatus::_InternalParse;
+          object = msg->add_exchange_status();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 18 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool GetTradesResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ssigmaapi.markethub.v1.GetTradesResponse)
   for (;;) {
@@ -868,8 +966,7 @@ bool GetTradesResponse::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated .ssigmaapi.markethub.v1.TradesWithMarket trades_with_market = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                 input, add_trades_with_market()));
         } else {
@@ -880,8 +977,7 @@ bool GetTradesResponse::MergePartialFromCodedStream(
 
       // repeated .ssigmaapi.markethub.v1.ExchangeStatus exchange_status = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                 input, add_exchange_status()));
         } else {
@@ -909,6 +1005,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void GetTradesResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -934,16 +1031,15 @@ void GetTradesResponse::SerializeWithCachedSizes(
       output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:ssigmaapi.markethub.v1.GetTradesResponse)
 }
 
 ::google::protobuf::uint8* GetTradesResponse::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:ssigmaapi.markethub.v1.GetTradesResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -953,7 +1049,7 @@ void GetTradesResponse::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->trades_with_market_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, this->trades_with_market(static_cast<int>(i)), deterministic, target);
+        1, this->trades_with_market(static_cast<int>(i)), target);
   }
 
   // repeated .ssigmaapi.markethub.v1.ExchangeStatus exchange_status = 2;
@@ -961,12 +1057,12 @@ void GetTradesResponse::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->exchange_status_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, this->exchange_status(static_cast<int>(i)), deterministic, target);
+        2, this->exchange_status(static_cast<int>(i)), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ssigmaapi.markethub.v1.GetTradesResponse)
   return target;
@@ -976,11 +1072,15 @@ size_t GetTradesResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ssigmaapi.markethub.v1.GetTradesResponse)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .ssigmaapi.markethub.v1.TradesWithMarket trades_with_market = 1;
   {
     unsigned int count = static_cast<unsigned int>(this->trades_with_market_size());
@@ -1012,9 +1112,9 @@ void GetTradesResponse::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ssigmaapi.markethub.v1.GetTradesResponse)
   GOOGLE_DCHECK_NE(&from, this);
   const GetTradesResponse* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const GetTradesResponse>(
+      ::google::protobuf::DynamicCastToGenerated<GetTradesResponse>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssigmaapi.markethub.v1.GetTradesResponse)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1058,14 +1158,14 @@ void GetTradesResponse::Swap(GetTradesResponse* other) {
 }
 void GetTradesResponse::InternalSwap(GetTradesResponse* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   CastToBase(&trades_with_market_)->InternalSwap(CastToBase(&other->trades_with_market_));
   CastToBase(&exchange_status_)->InternalSwap(CastToBase(&other->exchange_status_));
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata GetTradesResponse::GetMetadata() const {
-  protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto);
+  return ::file_level_metadata_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto[kIndexInFileMessages];
 }
 
 
@@ -1073,6 +1173,10 @@ void GetTradesResponse::InternalSwap(GetTradesResponse* other) {
 
 void GetOrderBooksRequest::InitAsDefaultInstance() {
 }
+class GetOrderBooksRequest::HasBitSetters {
+ public:
+};
+
 void GetOrderBooksRequest::clear_market() {
   market_.Clear();
 }
@@ -1081,21 +1185,21 @@ const int GetOrderBooksRequest::kMarketFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 GetOrderBooksRequest::GetOrderBooksRequest()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetOrderBooksRequest.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:ssigmaapi.markethub.v1.GetOrderBooksRequest)
 }
 GetOrderBooksRequest::GetOrderBooksRequest(const GetOrderBooksRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
+      _internal_metadata_(nullptr),
       market_(from.market_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:ssigmaapi.markethub.v1.GetOrderBooksRequest)
 }
 
 void GetOrderBooksRequest::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GetOrderBooksRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
 }
 
 GetOrderBooksRequest::~GetOrderBooksRequest() {
@@ -1109,13 +1213,8 @@ void GetOrderBooksRequest::SharedDtor() {
 void GetOrderBooksRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* GetOrderBooksRequest::descriptor() {
-  ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const GetOrderBooksRequest& GetOrderBooksRequest::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetOrderBooksRequest.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_GetOrderBooksRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -1130,9 +1229,58 @@ void GetOrderBooksRequest::Clear() {
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GetOrderBooksRequest::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GetOrderBooksRequest*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // repeated .ssigmaapi.type.Market market = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::ssigmaapi::type::Market::_InternalParse;
+          object = msg->add_market();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 10 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool GetOrderBooksRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ssigmaapi.markethub.v1.GetOrderBooksRequest)
   for (;;) {
@@ -1142,8 +1290,7 @@ bool GetOrderBooksRequest::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated .ssigmaapi.type.Market market = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                 input, add_market()));
         } else {
@@ -1171,6 +1318,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void GetOrderBooksRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -1187,16 +1335,15 @@ void GetOrderBooksRequest::SerializeWithCachedSizes(
       output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:ssigmaapi.markethub.v1.GetOrderBooksRequest)
 }
 
 ::google::protobuf::uint8* GetOrderBooksRequest::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:ssigmaapi.markethub.v1.GetOrderBooksRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1206,12 +1353,12 @@ void GetOrderBooksRequest::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->market_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, this->market(static_cast<int>(i)), deterministic, target);
+        1, this->market(static_cast<int>(i)), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ssigmaapi.markethub.v1.GetOrderBooksRequest)
   return target;
@@ -1221,11 +1368,15 @@ size_t GetOrderBooksRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ssigmaapi.markethub.v1.GetOrderBooksRequest)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .ssigmaapi.type.Market market = 1;
   {
     unsigned int count = static_cast<unsigned int>(this->market_size());
@@ -1246,9 +1397,9 @@ void GetOrderBooksRequest::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ssigmaapi.markethub.v1.GetOrderBooksRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const GetOrderBooksRequest* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const GetOrderBooksRequest>(
+      ::google::protobuf::DynamicCastToGenerated<GetOrderBooksRequest>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssigmaapi.markethub.v1.GetOrderBooksRequest)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1291,13 +1442,13 @@ void GetOrderBooksRequest::Swap(GetOrderBooksRequest* other) {
 }
 void GetOrderBooksRequest::InternalSwap(GetOrderBooksRequest* other) {
   using std::swap;
-  CastToBase(&market_)->InternalSwap(CastToBase(&other->market_));
   _internal_metadata_.Swap(&other->_internal_metadata_);
+  CastToBase(&market_)->InternalSwap(CastToBase(&other->market_));
 }
 
 ::google::protobuf::Metadata GetOrderBooksRequest::GetMetadata() const {
-  protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto);
+  return ::file_level_metadata_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto[kIndexInFileMessages];
 }
 
 
@@ -1305,6 +1456,10 @@ void GetOrderBooksRequest::InternalSwap(GetOrderBooksRequest* other) {
 
 void GetOrderBooksResponse::InitAsDefaultInstance() {
 }
+class GetOrderBooksResponse::HasBitSetters {
+ public:
+};
+
 void GetOrderBooksResponse::clear_all() {
   all_.Clear();
 }
@@ -1315,15 +1470,13 @@ const int GetOrderBooksResponse::kExchangeStatusFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 GetOrderBooksResponse::GetOrderBooksResponse()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetOrderBooksResponse.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:ssigmaapi.markethub.v1.GetOrderBooksResponse)
 }
 GetOrderBooksResponse::GetOrderBooksResponse(const GetOrderBooksResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
+      _internal_metadata_(nullptr),
       all_(from.all_),
       exchange_status_(from.exchange_status_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
@@ -1332,7 +1485,9 @@ GetOrderBooksResponse::GetOrderBooksResponse(const GetOrderBooksResponse& from)
 }
 
 void GetOrderBooksResponse::SharedCtor() {
-  timestamp_ = GOOGLE_LONGLONG(0);
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GetOrderBooksResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
+  timestamp_ = PROTOBUF_LONGLONG(0);
 }
 
 GetOrderBooksResponse::~GetOrderBooksResponse() {
@@ -1346,13 +1501,8 @@ void GetOrderBooksResponse::SharedDtor() {
 void GetOrderBooksResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* GetOrderBooksResponse::descriptor() {
-  ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const GetOrderBooksResponse& GetOrderBooksResponse::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetOrderBooksResponse.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_GetOrderBooksResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -1365,13 +1515,85 @@ void GetOrderBooksResponse::Clear() {
 
   all_.Clear();
   exchange_status_.Clear();
-  timestamp_ = GOOGLE_LONGLONG(0);
+  timestamp_ = PROTOBUF_LONGLONG(0);
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GetOrderBooksResponse::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GetOrderBooksResponse*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // repeated .ssigmaapi.type.OrderBook all = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::ssigmaapi::type::OrderBook::_InternalParse;
+          object = msg->add_all();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 10 && (ptr += 1));
+        break;
+      }
+      // int64 timestamp = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
+        msg->set_timestamp(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // repeated .ssigmaapi.markethub.v1.ExchangeStatus exchange_status = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::ssigmaapi::markethub::v1::ExchangeStatus::_InternalParse;
+          object = msg->add_exchange_status();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 26 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool GetOrderBooksResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ssigmaapi.markethub.v1.GetOrderBooksResponse)
   for (;;) {
@@ -1381,8 +1603,7 @@ bool GetOrderBooksResponse::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated .ssigmaapi.type.OrderBook all = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                 input, add_all()));
         } else {
@@ -1393,8 +1614,7 @@ bool GetOrderBooksResponse::MergePartialFromCodedStream(
 
       // int64 timestamp = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -1407,8 +1627,7 @@ bool GetOrderBooksResponse::MergePartialFromCodedStream(
 
       // repeated .ssigmaapi.markethub.v1.ExchangeStatus exchange_status = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                 input, add_exchange_status()));
         } else {
@@ -1436,6 +1655,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void GetOrderBooksResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -1466,16 +1686,15 @@ void GetOrderBooksResponse::SerializeWithCachedSizes(
       output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:ssigmaapi.markethub.v1.GetOrderBooksResponse)
 }
 
 ::google::protobuf::uint8* GetOrderBooksResponse::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:ssigmaapi.markethub.v1.GetOrderBooksResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1485,7 +1704,7 @@ void GetOrderBooksResponse::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->all_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, this->all(static_cast<int>(i)), deterministic, target);
+        1, this->all(static_cast<int>(i)), target);
   }
 
   // int64 timestamp = 2;
@@ -1498,12 +1717,12 @@ void GetOrderBooksResponse::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->exchange_status_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        3, this->exchange_status(static_cast<int>(i)), deterministic, target);
+        3, this->exchange_status(static_cast<int>(i)), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ssigmaapi.markethub.v1.GetOrderBooksResponse)
   return target;
@@ -1513,11 +1732,15 @@ size_t GetOrderBooksResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ssigmaapi.markethub.v1.GetOrderBooksResponse)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .ssigmaapi.type.OrderBook all = 1;
   {
     unsigned int count = static_cast<unsigned int>(this->all_size());
@@ -1556,9 +1779,9 @@ void GetOrderBooksResponse::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ssigmaapi.markethub.v1.GetOrderBooksResponse)
   GOOGLE_DCHECK_NE(&from, this);
   const GetOrderBooksResponse* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const GetOrderBooksResponse>(
+      ::google::protobuf::DynamicCastToGenerated<GetOrderBooksResponse>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssigmaapi.markethub.v1.GetOrderBooksResponse)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1605,15 +1828,15 @@ void GetOrderBooksResponse::Swap(GetOrderBooksResponse* other) {
 }
 void GetOrderBooksResponse::InternalSwap(GetOrderBooksResponse* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   CastToBase(&all_)->InternalSwap(CastToBase(&other->all_));
   CastToBase(&exchange_status_)->InternalSwap(CastToBase(&other->exchange_status_));
   swap(timestamp_, other->timestamp_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata GetOrderBooksResponse::GetMetadata() const {
-  protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto);
+  return ::file_level_metadata_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto[kIndexInFileMessages];
 }
 
 
@@ -1625,36 +1848,50 @@ void GetTradesAndOrderBooksRequest::InitAsDefaultInstance() {
   ::ssigmaapi::markethub::v1::_GetTradesAndOrderBooksRequest_default_instance_._instance.get_mutable()->orderbooks_req_ = const_cast< ::ssigmaapi::markethub::v1::GetOrderBooksRequest*>(
       ::ssigmaapi::markethub::v1::GetOrderBooksRequest::internal_default_instance());
 }
+class GetTradesAndOrderBooksRequest::HasBitSetters {
+ public:
+  static const ::ssigmaapi::markethub::v1::GetTradesRequest& trades_req(const GetTradesAndOrderBooksRequest* msg);
+  static const ::ssigmaapi::markethub::v1::GetOrderBooksRequest& orderbooks_req(const GetTradesAndOrderBooksRequest* msg);
+};
+
+const ::ssigmaapi::markethub::v1::GetTradesRequest&
+GetTradesAndOrderBooksRequest::HasBitSetters::trades_req(const GetTradesAndOrderBooksRequest* msg) {
+  return *msg->trades_req_;
+}
+const ::ssigmaapi::markethub::v1::GetOrderBooksRequest&
+GetTradesAndOrderBooksRequest::HasBitSetters::orderbooks_req(const GetTradesAndOrderBooksRequest* msg) {
+  return *msg->orderbooks_req_;
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int GetTradesAndOrderBooksRequest::kTradesReqFieldNumber;
 const int GetTradesAndOrderBooksRequest::kOrderbooksReqFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 GetTradesAndOrderBooksRequest::GetTradesAndOrderBooksRequest()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetTradesAndOrderBooksRequest.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:ssigmaapi.markethub.v1.GetTradesAndOrderBooksRequest)
 }
 GetTradesAndOrderBooksRequest::GetTradesAndOrderBooksRequest(const GetTradesAndOrderBooksRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_trades_req()) {
     trades_req_ = new ::ssigmaapi::markethub::v1::GetTradesRequest(*from.trades_req_);
   } else {
-    trades_req_ = NULL;
+    trades_req_ = nullptr;
   }
   if (from.has_orderbooks_req()) {
     orderbooks_req_ = new ::ssigmaapi::markethub::v1::GetOrderBooksRequest(*from.orderbooks_req_);
   } else {
-    orderbooks_req_ = NULL;
+    orderbooks_req_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:ssigmaapi.markethub.v1.GetTradesAndOrderBooksRequest)
 }
 
 void GetTradesAndOrderBooksRequest::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GetTradesAndOrderBooksRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
   ::memset(&trades_req_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&orderbooks_req_) -
       reinterpret_cast<char*>(&trades_req_)) + sizeof(orderbooks_req_));
@@ -1673,13 +1910,8 @@ void GetTradesAndOrderBooksRequest::SharedDtor() {
 void GetTradesAndOrderBooksRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* GetTradesAndOrderBooksRequest::descriptor() {
-  ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const GetTradesAndOrderBooksRequest& GetTradesAndOrderBooksRequest::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetTradesAndOrderBooksRequest.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_GetTradesAndOrderBooksRequest_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -1690,20 +1922,79 @@ void GetTradesAndOrderBooksRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == NULL && trades_req_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && trades_req_ != nullptr) {
     delete trades_req_;
   }
-  trades_req_ = NULL;
-  if (GetArenaNoVirtual() == NULL && orderbooks_req_ != NULL) {
+  trades_req_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && orderbooks_req_ != nullptr) {
     delete orderbooks_req_;
   }
-  orderbooks_req_ = NULL;
+  orderbooks_req_ = nullptr;
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GetTradesAndOrderBooksRequest::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GetTradesAndOrderBooksRequest*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // .ssigmaapi.markethub.v1.GetTradesRequest trades_req = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::ssigmaapi::markethub::v1::GetTradesRequest::_InternalParse;
+        object = msg->mutable_trades_req();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .ssigmaapi.markethub.v1.GetOrderBooksRequest orderbooks_req = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::ssigmaapi::markethub::v1::GetOrderBooksRequest::_InternalParse;
+        object = msg->mutable_orderbooks_req();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool GetTradesAndOrderBooksRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ssigmaapi.markethub.v1.GetTradesAndOrderBooksRequest)
   for (;;) {
@@ -1713,8 +2004,7 @@ bool GetTradesAndOrderBooksRequest::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .ssigmaapi.markethub.v1.GetTradesRequest trades_req = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_trades_req()));
         } else {
@@ -1725,8 +2015,7 @@ bool GetTradesAndOrderBooksRequest::MergePartialFromCodedStream(
 
       // .ssigmaapi.markethub.v1.GetOrderBooksRequest orderbooks_req = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_orderbooks_req()));
         } else {
@@ -1754,6 +2043,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void GetTradesAndOrderBooksRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -1764,25 +2054,24 @@ void GetTradesAndOrderBooksRequest::SerializeWithCachedSizes(
   // .ssigmaapi.markethub.v1.GetTradesRequest trades_req = 1;
   if (this->has_trades_req()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_trades_req(), output);
+      1, HasBitSetters::trades_req(this), output);
   }
 
   // .ssigmaapi.markethub.v1.GetOrderBooksRequest orderbooks_req = 2;
   if (this->has_orderbooks_req()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->_internal_orderbooks_req(), output);
+      2, HasBitSetters::orderbooks_req(this), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:ssigmaapi.markethub.v1.GetTradesAndOrderBooksRequest)
 }
 
 ::google::protobuf::uint8* GetTradesAndOrderBooksRequest::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:ssigmaapi.markethub.v1.GetTradesAndOrderBooksRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1791,19 +2080,19 @@ void GetTradesAndOrderBooksRequest::SerializeWithCachedSizes(
   if (this->has_trades_req()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, this->_internal_trades_req(), deterministic, target);
+        1, HasBitSetters::trades_req(this), target);
   }
 
   // .ssigmaapi.markethub.v1.GetOrderBooksRequest orderbooks_req = 2;
   if (this->has_orderbooks_req()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, this->_internal_orderbooks_req(), deterministic, target);
+        2, HasBitSetters::orderbooks_req(this), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ssigmaapi.markethub.v1.GetTradesAndOrderBooksRequest)
   return target;
@@ -1813,11 +2102,15 @@ size_t GetTradesAndOrderBooksRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ssigmaapi.markethub.v1.GetTradesAndOrderBooksRequest)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // .ssigmaapi.markethub.v1.GetTradesRequest trades_req = 1;
   if (this->has_trades_req()) {
     total_size += 1 +
@@ -1841,9 +2134,9 @@ void GetTradesAndOrderBooksRequest::MergeFrom(const ::google::protobuf::Message&
 // @@protoc_insertion_point(generalized_merge_from_start:ssigmaapi.markethub.v1.GetTradesAndOrderBooksRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const GetTradesAndOrderBooksRequest* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const GetTradesAndOrderBooksRequest>(
+      ::google::protobuf::DynamicCastToGenerated<GetTradesAndOrderBooksRequest>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssigmaapi.markethub.v1.GetTradesAndOrderBooksRequest)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1891,14 +2184,14 @@ void GetTradesAndOrderBooksRequest::Swap(GetTradesAndOrderBooksRequest* other) {
 }
 void GetTradesAndOrderBooksRequest::InternalSwap(GetTradesAndOrderBooksRequest* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(trades_req_, other->trades_req_);
   swap(orderbooks_req_, other->orderbooks_req_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata GetTradesAndOrderBooksRequest::GetMetadata() const {
-  protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto);
+  return ::file_level_metadata_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto[kIndexInFileMessages];
 }
 
 
@@ -1910,6 +2203,20 @@ void GetTradesAndOrderBooksResponse::InitAsDefaultInstance() {
   ::ssigmaapi::markethub::v1::_GetTradesAndOrderBooksResponse_default_instance_._instance.get_mutable()->orderbooks_res_ = const_cast< ::ssigmaapi::markethub::v1::GetOrderBooksResponse*>(
       ::ssigmaapi::markethub::v1::GetOrderBooksResponse::internal_default_instance());
 }
+class GetTradesAndOrderBooksResponse::HasBitSetters {
+ public:
+  static const ::ssigmaapi::markethub::v1::GetTradesResponse& trades_res(const GetTradesAndOrderBooksResponse* msg);
+  static const ::ssigmaapi::markethub::v1::GetOrderBooksResponse& orderbooks_res(const GetTradesAndOrderBooksResponse* msg);
+};
+
+const ::ssigmaapi::markethub::v1::GetTradesResponse&
+GetTradesAndOrderBooksResponse::HasBitSetters::trades_res(const GetTradesAndOrderBooksResponse* msg) {
+  return *msg->trades_res_;
+}
+const ::ssigmaapi::markethub::v1::GetOrderBooksResponse&
+GetTradesAndOrderBooksResponse::HasBitSetters::orderbooks_res(const GetTradesAndOrderBooksResponse* msg) {
+  return *msg->orderbooks_res_;
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int GetTradesAndOrderBooksResponse::kTradesResFieldNumber;
 const int GetTradesAndOrderBooksResponse::kOrderbooksResFieldNumber;
@@ -1917,31 +2224,31 @@ const int GetTradesAndOrderBooksResponse::kExchangeStatusFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 GetTradesAndOrderBooksResponse::GetTradesAndOrderBooksResponse()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetTradesAndOrderBooksResponse.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:ssigmaapi.markethub.v1.GetTradesAndOrderBooksResponse)
 }
 GetTradesAndOrderBooksResponse::GetTradesAndOrderBooksResponse(const GetTradesAndOrderBooksResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
+      _internal_metadata_(nullptr),
       exchange_status_(from.exchange_status_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_trades_res()) {
     trades_res_ = new ::ssigmaapi::markethub::v1::GetTradesResponse(*from.trades_res_);
   } else {
-    trades_res_ = NULL;
+    trades_res_ = nullptr;
   }
   if (from.has_orderbooks_res()) {
     orderbooks_res_ = new ::ssigmaapi::markethub::v1::GetOrderBooksResponse(*from.orderbooks_res_);
   } else {
-    orderbooks_res_ = NULL;
+    orderbooks_res_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:ssigmaapi.markethub.v1.GetTradesAndOrderBooksResponse)
 }
 
 void GetTradesAndOrderBooksResponse::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GetTradesAndOrderBooksResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
   ::memset(&trades_res_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&orderbooks_res_) -
       reinterpret_cast<char*>(&trades_res_)) + sizeof(orderbooks_res_));
@@ -1960,13 +2267,8 @@ void GetTradesAndOrderBooksResponse::SharedDtor() {
 void GetTradesAndOrderBooksResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* GetTradesAndOrderBooksResponse::descriptor() {
-  ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const GetTradesAndOrderBooksResponse& GetTradesAndOrderBooksResponse::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_GetTradesAndOrderBooksResponse.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_GetTradesAndOrderBooksResponse_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -1978,20 +2280,95 @@ void GetTradesAndOrderBooksResponse::Clear() {
   (void) cached_has_bits;
 
   exchange_status_.Clear();
-  if (GetArenaNoVirtual() == NULL && trades_res_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && trades_res_ != nullptr) {
     delete trades_res_;
   }
-  trades_res_ = NULL;
-  if (GetArenaNoVirtual() == NULL && orderbooks_res_ != NULL) {
+  trades_res_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && orderbooks_res_ != nullptr) {
     delete orderbooks_res_;
   }
-  orderbooks_res_ = NULL;
+  orderbooks_res_ = nullptr;
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GetTradesAndOrderBooksResponse::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GetTradesAndOrderBooksResponse*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // .ssigmaapi.markethub.v1.GetTradesResponse trades_res = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::ssigmaapi::markethub::v1::GetTradesResponse::_InternalParse;
+        object = msg->mutable_trades_res();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .ssigmaapi.markethub.v1.GetOrderBooksResponse orderbooks_res = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::ssigmaapi::markethub::v1::GetOrderBooksResponse::_InternalParse;
+        object = msg->mutable_orderbooks_res();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // repeated .ssigmaapi.markethub.v1.ExchangeStatus exchange_status = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::ssigmaapi::markethub::v1::ExchangeStatus::_InternalParse;
+          object = msg->add_exchange_status();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 26 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool GetTradesAndOrderBooksResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ssigmaapi.markethub.v1.GetTradesAndOrderBooksResponse)
   for (;;) {
@@ -2001,8 +2378,7 @@ bool GetTradesAndOrderBooksResponse::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .ssigmaapi.markethub.v1.GetTradesResponse trades_res = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_trades_res()));
         } else {
@@ -2013,8 +2389,7 @@ bool GetTradesAndOrderBooksResponse::MergePartialFromCodedStream(
 
       // .ssigmaapi.markethub.v1.GetOrderBooksResponse orderbooks_res = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_orderbooks_res()));
         } else {
@@ -2025,8 +2400,7 @@ bool GetTradesAndOrderBooksResponse::MergePartialFromCodedStream(
 
       // repeated .ssigmaapi.markethub.v1.ExchangeStatus exchange_status = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                 input, add_exchange_status()));
         } else {
@@ -2054,6 +2428,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void GetTradesAndOrderBooksResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -2064,13 +2439,13 @@ void GetTradesAndOrderBooksResponse::SerializeWithCachedSizes(
   // .ssigmaapi.markethub.v1.GetTradesResponse trades_res = 1;
   if (this->has_trades_res()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_trades_res(), output);
+      1, HasBitSetters::trades_res(this), output);
   }
 
   // .ssigmaapi.markethub.v1.GetOrderBooksResponse orderbooks_res = 2;
   if (this->has_orderbooks_res()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->_internal_orderbooks_res(), output);
+      2, HasBitSetters::orderbooks_res(this), output);
   }
 
   // repeated .ssigmaapi.markethub.v1.ExchangeStatus exchange_status = 3;
@@ -2082,16 +2457,15 @@ void GetTradesAndOrderBooksResponse::SerializeWithCachedSizes(
       output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:ssigmaapi.markethub.v1.GetTradesAndOrderBooksResponse)
 }
 
 ::google::protobuf::uint8* GetTradesAndOrderBooksResponse::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:ssigmaapi.markethub.v1.GetTradesAndOrderBooksResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2100,14 +2474,14 @@ void GetTradesAndOrderBooksResponse::SerializeWithCachedSizes(
   if (this->has_trades_res()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, this->_internal_trades_res(), deterministic, target);
+        1, HasBitSetters::trades_res(this), target);
   }
 
   // .ssigmaapi.markethub.v1.GetOrderBooksResponse orderbooks_res = 2;
   if (this->has_orderbooks_res()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, this->_internal_orderbooks_res(), deterministic, target);
+        2, HasBitSetters::orderbooks_res(this), target);
   }
 
   // repeated .ssigmaapi.markethub.v1.ExchangeStatus exchange_status = 3;
@@ -2115,12 +2489,12 @@ void GetTradesAndOrderBooksResponse::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->exchange_status_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        3, this->exchange_status(static_cast<int>(i)), deterministic, target);
+        3, this->exchange_status(static_cast<int>(i)), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ssigmaapi.markethub.v1.GetTradesAndOrderBooksResponse)
   return target;
@@ -2130,11 +2504,15 @@ size_t GetTradesAndOrderBooksResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ssigmaapi.markethub.v1.GetTradesAndOrderBooksResponse)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .ssigmaapi.markethub.v1.ExchangeStatus exchange_status = 3;
   {
     unsigned int count = static_cast<unsigned int>(this->exchange_status_size());
@@ -2169,9 +2547,9 @@ void GetTradesAndOrderBooksResponse::MergeFrom(const ::google::protobuf::Message
 // @@protoc_insertion_point(generalized_merge_from_start:ssigmaapi.markethub.v1.GetTradesAndOrderBooksResponse)
   GOOGLE_DCHECK_NE(&from, this);
   const GetTradesAndOrderBooksResponse* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const GetTradesAndOrderBooksResponse>(
+      ::google::protobuf::DynamicCastToGenerated<GetTradesAndOrderBooksResponse>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssigmaapi.markethub.v1.GetTradesAndOrderBooksResponse)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -2220,15 +2598,15 @@ void GetTradesAndOrderBooksResponse::Swap(GetTradesAndOrderBooksResponse* other)
 }
 void GetTradesAndOrderBooksResponse::InternalSwap(GetTradesAndOrderBooksResponse* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   CastToBase(&exchange_status_)->InternalSwap(CastToBase(&other->exchange_status_));
   swap(trades_res_, other->trades_res_);
   swap(orderbooks_res_, other->orderbooks_res_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata GetTradesAndOrderBooksResponse::GetMetadata() const {
-  protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto);
+  return ::file_level_metadata_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto[kIndexInFileMessages];
 }
 
 
@@ -2238,11 +2616,20 @@ void TradeWithAdditionalInfo::InitAsDefaultInstance() {
   ::ssigmaapi::markethub::v1::_TradeWithAdditionalInfo_default_instance_._instance.get_mutable()->trade_ = const_cast< ::ssigmaapi::type::Trade*>(
       ::ssigmaapi::type::Trade::internal_default_instance());
 }
+class TradeWithAdditionalInfo::HasBitSetters {
+ public:
+  static const ::ssigmaapi::type::Trade& trade(const TradeWithAdditionalInfo* msg);
+};
+
+const ::ssigmaapi::type::Trade&
+TradeWithAdditionalInfo::HasBitSetters::trade(const TradeWithAdditionalInfo* msg) {
+  return *msg->trade_;
+}
 void TradeWithAdditionalInfo::clear_trade() {
-  if (GetArenaNoVirtual() == NULL && trade_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && trade_ != nullptr) {
     delete trade_;
   }
-  trade_ = NULL;
+  trade_ = nullptr;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int TradeWithAdditionalInfo::kTradeFieldNumber;
@@ -2258,20 +2645,18 @@ const int TradeWithAdditionalInfo::kVolumeWindowingSizeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 TradeWithAdditionalInfo::TradeWithAdditionalInfo()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_TradeWithAdditionalInfo.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:ssigmaapi.markethub.v1.TradeWithAdditionalInfo)
 }
 TradeWithAdditionalInfo::TradeWithAdditionalInfo(const TradeWithAdditionalInfo& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_trade()) {
     trade_ = new ::ssigmaapi::type::Trade(*from.trade_);
   } else {
-    trade_ = NULL;
+    trade_ = nullptr;
   }
   ::memcpy(&velocity_, &from.velocity_,
     static_cast<size_t>(reinterpret_cast<char*>(&volume_windowing_size_) -
@@ -2280,6 +2665,8 @@ TradeWithAdditionalInfo::TradeWithAdditionalInfo(const TradeWithAdditionalInfo& 
 }
 
 void TradeWithAdditionalInfo::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_TradeWithAdditionalInfo_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
   ::memset(&trade_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&volume_windowing_size_) -
       reinterpret_cast<char*>(&trade_)) + sizeof(volume_windowing_size_));
@@ -2297,13 +2684,8 @@ void TradeWithAdditionalInfo::SharedDtor() {
 void TradeWithAdditionalInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* TradeWithAdditionalInfo::descriptor() {
-  ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const TradeWithAdditionalInfo& TradeWithAdditionalInfo::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_TradeWithAdditionalInfo.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_TradeWithAdditionalInfo_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -2314,19 +2696,128 @@ void TradeWithAdditionalInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == NULL && trade_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && trade_ != nullptr) {
     delete trade_;
   }
-  trade_ = NULL;
+  trade_ = nullptr;
   ::memset(&velocity_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&volume_windowing_size_) -
       reinterpret_cast<char*>(&velocity_)) + sizeof(volume_windowing_size_));
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* TradeWithAdditionalInfo::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<TradeWithAdditionalInfo*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // .ssigmaapi.type.Trade trade = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::ssigmaapi::type::Trade::_InternalParse;
+        object = msg->mutable_trade();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // double velocity = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 17) goto handle_unusual;
+        msg->set_velocity(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double acceleration = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 25) goto handle_unusual;
+        msg->set_acceleration(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double volatility = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 33) goto handle_unusual;
+        msg->set_volatility(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double volume_base = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 41) goto handle_unusual;
+        msg->set_volume_base(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double volume_quote = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 49) goto handle_unusual;
+        msg->set_volume_quote(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // double momentum_rate = 7;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 57) goto handle_unusual;
+        msg->set_momentum_rate(::google::protobuf::io::UnalignedLoad<double>(ptr));
+        ptr += sizeof(double);
+        break;
+      }
+      // int64 velocity_windowing_size = 8;
+      case 8: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 64) goto handle_unusual;
+        msg->set_velocity_windowing_size(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int64 volatility_windowing_size = 9;
+      case 9: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 72) goto handle_unusual;
+        msg->set_volatility_windowing_size(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int64 volume_windowing_size = 10;
+      case 10: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 80) goto handle_unusual;
+        msg->set_volume_windowing_size(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool TradeWithAdditionalInfo::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ssigmaapi.markethub.v1.TradeWithAdditionalInfo)
   for (;;) {
@@ -2336,8 +2827,7 @@ bool TradeWithAdditionalInfo::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .ssigmaapi.type.Trade trade = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_trade()));
         } else {
@@ -2348,8 +2838,7 @@ bool TradeWithAdditionalInfo::MergePartialFromCodedStream(
 
       // double velocity = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (17 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -2362,8 +2851,7 @@ bool TradeWithAdditionalInfo::MergePartialFromCodedStream(
 
       // double acceleration = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (25 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -2376,8 +2864,7 @@ bool TradeWithAdditionalInfo::MergePartialFromCodedStream(
 
       // double volatility = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (33 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -2390,8 +2877,7 @@ bool TradeWithAdditionalInfo::MergePartialFromCodedStream(
 
       // double volume_base = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(41u /* 41 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (41 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -2404,8 +2890,7 @@ bool TradeWithAdditionalInfo::MergePartialFromCodedStream(
 
       // double volume_quote = 6;
       case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(49u /* 49 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (49 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -2418,8 +2903,7 @@ bool TradeWithAdditionalInfo::MergePartialFromCodedStream(
 
       // double momentum_rate = 7;
       case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(57u /* 57 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (57 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -2432,8 +2916,7 @@ bool TradeWithAdditionalInfo::MergePartialFromCodedStream(
 
       // int64 velocity_windowing_size = 8;
       case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(64u /* 64 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (64 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -2446,8 +2929,7 @@ bool TradeWithAdditionalInfo::MergePartialFromCodedStream(
 
       // int64 volatility_windowing_size = 9;
       case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(72u /* 72 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (72 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -2460,8 +2942,7 @@ bool TradeWithAdditionalInfo::MergePartialFromCodedStream(
 
       // int64 volume_windowing_size = 10;
       case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(80u /* 80 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (80 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -2491,6 +2972,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void TradeWithAdditionalInfo::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -2501,7 +2983,7 @@ void TradeWithAdditionalInfo::SerializeWithCachedSizes(
   // .ssigmaapi.type.Trade trade = 1;
   if (this->has_trade()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_trade(), output);
+      1, HasBitSetters::trade(this), output);
   }
 
   // double velocity = 2;
@@ -2549,16 +3031,15 @@ void TradeWithAdditionalInfo::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(10, this->volume_windowing_size(), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:ssigmaapi.markethub.v1.TradeWithAdditionalInfo)
 }
 
 ::google::protobuf::uint8* TradeWithAdditionalInfo::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:ssigmaapi.markethub.v1.TradeWithAdditionalInfo)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2567,7 +3048,7 @@ void TradeWithAdditionalInfo::SerializeWithCachedSizes(
   if (this->has_trade()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, this->_internal_trade(), deterministic, target);
+        1, HasBitSetters::trade(this), target);
   }
 
   // double velocity = 2;
@@ -2615,9 +3096,9 @@ void TradeWithAdditionalInfo::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(10, this->volume_windowing_size(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ssigmaapi.markethub.v1.TradeWithAdditionalInfo)
   return target;
@@ -2627,11 +3108,15 @@ size_t TradeWithAdditionalInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ssigmaapi.markethub.v1.TradeWithAdditionalInfo)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // .ssigmaapi.type.Trade trade = 1;
   if (this->has_trade()) {
     total_size += 1 +
@@ -2699,9 +3184,9 @@ void TradeWithAdditionalInfo::MergeFrom(const ::google::protobuf::Message& from)
 // @@protoc_insertion_point(generalized_merge_from_start:ssigmaapi.markethub.v1.TradeWithAdditionalInfo)
   GOOGLE_DCHECK_NE(&from, this);
   const TradeWithAdditionalInfo* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const TradeWithAdditionalInfo>(
+      ::google::protobuf::DynamicCastToGenerated<TradeWithAdditionalInfo>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssigmaapi.markethub.v1.TradeWithAdditionalInfo)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -2773,6 +3258,7 @@ void TradeWithAdditionalInfo::Swap(TradeWithAdditionalInfo* other) {
 }
 void TradeWithAdditionalInfo::InternalSwap(TradeWithAdditionalInfo* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(trade_, other->trade_);
   swap(velocity_, other->velocity_);
   swap(acceleration_, other->acceleration_);
@@ -2783,12 +3269,11 @@ void TradeWithAdditionalInfo::InternalSwap(TradeWithAdditionalInfo* other) {
   swap(velocity_windowing_size_, other->velocity_windowing_size_);
   swap(volatility_windowing_size_, other->volatility_windowing_size_);
   swap(volume_windowing_size_, other->volume_windowing_size_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata TradeWithAdditionalInfo::GetMetadata() const {
-  protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto);
+  return ::file_level_metadata_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto[kIndexInFileMessages];
 }
 
 
@@ -2798,11 +3283,20 @@ void TradesWithMarket::InitAsDefaultInstance() {
   ::ssigmaapi::markethub::v1::_TradesWithMarket_default_instance_._instance.get_mutable()->market_ = const_cast< ::ssigmaapi::type::Market*>(
       ::ssigmaapi::type::Market::internal_default_instance());
 }
+class TradesWithMarket::HasBitSetters {
+ public:
+  static const ::ssigmaapi::type::Market& market(const TradesWithMarket* msg);
+};
+
+const ::ssigmaapi::type::Market&
+TradesWithMarket::HasBitSetters::market(const TradesWithMarket* msg) {
+  return *msg->market_;
+}
 void TradesWithMarket::clear_market() {
-  if (GetArenaNoVirtual() == NULL && market_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && market_ != nullptr) {
     delete market_;
   }
-  market_ = NULL;
+  market_ = nullptr;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int TradesWithMarket::kMarketFieldNumber;
@@ -2810,27 +3304,27 @@ const int TradesWithMarket::kTradesFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 TradesWithMarket::TradesWithMarket()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_TradesWithMarket.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:ssigmaapi.markethub.v1.TradesWithMarket)
 }
 TradesWithMarket::TradesWithMarket(const TradesWithMarket& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
+      _internal_metadata_(nullptr),
       trades_(from.trades_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_market()) {
     market_ = new ::ssigmaapi::type::Market(*from.market_);
   } else {
-    market_ = NULL;
+    market_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:ssigmaapi.markethub.v1.TradesWithMarket)
 }
 
 void TradesWithMarket::SharedCtor() {
-  market_ = NULL;
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_TradesWithMarket_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
+  market_ = nullptr;
 }
 
 TradesWithMarket::~TradesWithMarket() {
@@ -2845,13 +3339,8 @@ void TradesWithMarket::SharedDtor() {
 void TradesWithMarket::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* TradesWithMarket::descriptor() {
-  ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const TradesWithMarket& TradesWithMarket::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_TradesWithMarket.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_TradesWithMarket_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -2863,16 +3352,78 @@ void TradesWithMarket::Clear() {
   (void) cached_has_bits;
 
   trades_.Clear();
-  if (GetArenaNoVirtual() == NULL && market_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && market_ != nullptr) {
     delete market_;
   }
-  market_ = NULL;
+  market_ = nullptr;
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* TradesWithMarket::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<TradesWithMarket*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // .ssigmaapi.type.Market market = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::ssigmaapi::type::Market::_InternalParse;
+        object = msg->mutable_market();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // repeated .ssigmaapi.markethub.v1.TradeWithAdditionalInfo trades = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::ssigmaapi::markethub::v1::TradeWithAdditionalInfo::_InternalParse;
+          object = msg->add_trades();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 18 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool TradesWithMarket::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ssigmaapi.markethub.v1.TradesWithMarket)
   for (;;) {
@@ -2882,8 +3433,7 @@ bool TradesWithMarket::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .ssigmaapi.type.Market market = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_market()));
         } else {
@@ -2894,8 +3444,7 @@ bool TradesWithMarket::MergePartialFromCodedStream(
 
       // repeated .ssigmaapi.markethub.v1.TradeWithAdditionalInfo trades = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                 input, add_trades()));
         } else {
@@ -2923,6 +3472,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void TradesWithMarket::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -2933,7 +3483,7 @@ void TradesWithMarket::SerializeWithCachedSizes(
   // .ssigmaapi.type.Market market = 1;
   if (this->has_market()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_market(), output);
+      1, HasBitSetters::market(this), output);
   }
 
   // repeated .ssigmaapi.markethub.v1.TradeWithAdditionalInfo trades = 2;
@@ -2945,16 +3495,15 @@ void TradesWithMarket::SerializeWithCachedSizes(
       output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:ssigmaapi.markethub.v1.TradesWithMarket)
 }
 
 ::google::protobuf::uint8* TradesWithMarket::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:ssigmaapi.markethub.v1.TradesWithMarket)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2963,7 +3512,7 @@ void TradesWithMarket::SerializeWithCachedSizes(
   if (this->has_market()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, this->_internal_market(), deterministic, target);
+        1, HasBitSetters::market(this), target);
   }
 
   // repeated .ssigmaapi.markethub.v1.TradeWithAdditionalInfo trades = 2;
@@ -2971,12 +3520,12 @@ void TradesWithMarket::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->trades_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, this->trades(static_cast<int>(i)), deterministic, target);
+        2, this->trades(static_cast<int>(i)), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ssigmaapi.markethub.v1.TradesWithMarket)
   return target;
@@ -2986,11 +3535,15 @@ size_t TradesWithMarket::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ssigmaapi.markethub.v1.TradesWithMarket)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .ssigmaapi.markethub.v1.TradeWithAdditionalInfo trades = 2;
   {
     unsigned int count = static_cast<unsigned int>(this->trades_size());
@@ -3018,9 +3571,9 @@ void TradesWithMarket::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ssigmaapi.markethub.v1.TradesWithMarket)
   GOOGLE_DCHECK_NE(&from, this);
   const TradesWithMarket* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const TradesWithMarket>(
+      ::google::protobuf::DynamicCastToGenerated<TradesWithMarket>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssigmaapi.markethub.v1.TradesWithMarket)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -3066,14 +3619,14 @@ void TradesWithMarket::Swap(TradesWithMarket* other) {
 }
 void TradesWithMarket::InternalSwap(TradesWithMarket* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   CastToBase(&trades_)->InternalSwap(CastToBase(&other->trades_));
   swap(market_, other->market_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata TradesWithMarket::GetMetadata() const {
-  protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto);
+  return ::file_level_metadata_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto[kIndexInFileMessages];
 }
 
 
@@ -3081,21 +3634,23 @@ void TradesWithMarket::InternalSwap(TradesWithMarket* other) {
 
 void ExchangeStatus::InitAsDefaultInstance() {
 }
+class ExchangeStatus::HasBitSetters {
+ public:
+};
+
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int ExchangeStatus::kExchangeFieldNumber;
 const int ExchangeStatus::kOpenFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 ExchangeStatus::ExchangeStatus()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_ExchangeStatus.base);
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:ssigmaapi.markethub.v1.ExchangeStatus)
 }
 ExchangeStatus::ExchangeStatus(const ExchangeStatus& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   exchange_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.exchange().size() > 0) {
@@ -3106,6 +3661,8 @@ ExchangeStatus::ExchangeStatus(const ExchangeStatus& from)
 }
 
 void ExchangeStatus::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ExchangeStatus_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
   exchange_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   open_ = false;
 }
@@ -3122,13 +3679,8 @@ void ExchangeStatus::SharedDtor() {
 void ExchangeStatus::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* ExchangeStatus::descriptor() {
-  ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const ExchangeStatus& ExchangeStatus::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::scc_info_ExchangeStatus.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_ExchangeStatus_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -3144,9 +3696,69 @@ void ExchangeStatus::Clear() {
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ExchangeStatus::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ExchangeStatus*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // string exchange = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("ssigmaapi.markethub.v1.ExchangeStatus.exchange");
+        object = msg->mutable_exchange();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // bool open = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
+        msg->set_open(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+string_till_end:
+  static_cast<::std::string*>(object)->clear();
+  static_cast<::std::string*>(object)->reserve(size);
+  goto len_delim_till_end;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool ExchangeStatus::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ssigmaapi.markethub.v1.ExchangeStatus)
   for (;;) {
@@ -3156,8 +3768,7 @@ bool ExchangeStatus::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // string exchange = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_exchange()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -3172,8 +3783,7 @@ bool ExchangeStatus::MergePartialFromCodedStream(
 
       // bool open = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -3203,6 +3813,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void ExchangeStatus::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -3225,16 +3836,15 @@ void ExchangeStatus::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->open(), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:ssigmaapi.markethub.v1.ExchangeStatus)
 }
 
 ::google::protobuf::uint8* ExchangeStatus::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:ssigmaapi.markethub.v1.ExchangeStatus)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3255,9 +3865,9 @@ void ExchangeStatus::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->open(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ssigmaapi.markethub.v1.ExchangeStatus)
   return target;
@@ -3267,11 +3877,15 @@ size_t ExchangeStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ssigmaapi.markethub.v1.ExchangeStatus)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string exchange = 1;
   if (this->exchange().size() > 0) {
     total_size += 1 +
@@ -3293,9 +3907,9 @@ void ExchangeStatus::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ssigmaapi.markethub.v1.ExchangeStatus)
   GOOGLE_DCHECK_NE(&from, this);
   const ExchangeStatus* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const ExchangeStatus>(
+      ::google::protobuf::DynamicCastToGenerated<ExchangeStatus>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssigmaapi.markethub.v1.ExchangeStatus)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -3344,15 +3958,15 @@ void ExchangeStatus::Swap(ExchangeStatus* other) {
 }
 void ExchangeStatus::InternalSwap(ExchangeStatus* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   exchange_.Swap(&other->exchange_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(open_, other->open_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata ExchangeStatus::GetMetadata() const {
-  protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto);
+  return ::file_level_metadata_ssigmaapi_2fmarkethub_2fv1_2fmarkethub_2eproto[kIndexInFileMessages];
 }
 
 
@@ -3362,34 +3976,35 @@ void ExchangeStatus::InternalSwap(ExchangeStatus* other) {
 }  // namespace ssigmaapi
 namespace google {
 namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::ssigmaapi::markethub::v1::GetTradesRequest* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::GetTradesRequest >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::ssigmaapi::markethub::v1::GetTradesRequest* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::GetTradesRequest >(Arena* arena) {
   return Arena::CreateInternal< ::ssigmaapi::markethub::v1::GetTradesRequest >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::ssigmaapi::markethub::v1::GetTradesResponse* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::GetTradesResponse >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::ssigmaapi::markethub::v1::GetTradesResponse* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::GetTradesResponse >(Arena* arena) {
   return Arena::CreateInternal< ::ssigmaapi::markethub::v1::GetTradesResponse >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::ssigmaapi::markethub::v1::GetOrderBooksRequest* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::GetOrderBooksRequest >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::ssigmaapi::markethub::v1::GetOrderBooksRequest* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::GetOrderBooksRequest >(Arena* arena) {
   return Arena::CreateInternal< ::ssigmaapi::markethub::v1::GetOrderBooksRequest >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::ssigmaapi::markethub::v1::GetOrderBooksResponse* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::GetOrderBooksResponse >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::ssigmaapi::markethub::v1::GetOrderBooksResponse* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::GetOrderBooksResponse >(Arena* arena) {
   return Arena::CreateInternal< ::ssigmaapi::markethub::v1::GetOrderBooksResponse >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest >(Arena* arena) {
   return Arena::CreateInternal< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksRequest >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse >(Arena* arena) {
   return Arena::CreateInternal< ::ssigmaapi::markethub::v1::GetTradesAndOrderBooksResponse >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::ssigmaapi::markethub::v1::TradeWithAdditionalInfo* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::TradeWithAdditionalInfo >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::ssigmaapi::markethub::v1::TradeWithAdditionalInfo* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::TradeWithAdditionalInfo >(Arena* arena) {
   return Arena::CreateInternal< ::ssigmaapi::markethub::v1::TradeWithAdditionalInfo >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::ssigmaapi::markethub::v1::TradesWithMarket* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::TradesWithMarket >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::ssigmaapi::markethub::v1::TradesWithMarket* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::TradesWithMarket >(Arena* arena) {
   return Arena::CreateInternal< ::ssigmaapi::markethub::v1::TradesWithMarket >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::ssigmaapi::markethub::v1::ExchangeStatus* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::ExchangeStatus >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::ssigmaapi::markethub::v1::ExchangeStatus* Arena::CreateMaybeMessage< ::ssigmaapi::markethub::v1::ExchangeStatus >(Arena* arena) {
   return Arena::CreateInternal< ::ssigmaapi::markethub::v1::ExchangeStatus >(arena);
 }
 }  // namespace protobuf
 }  // namespace google
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>
